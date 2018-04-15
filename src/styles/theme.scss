@@ -26,4 +26,9 @@
 /*================ MODULES ================*/
 @import url('modules/fonts.scss');
 @import url('modules/site-header.scss');
+@import url('modules/hero.scss');
 @import url('modules/gift-card-template.scss');
+
+html {
+  background: #0e0e0e;
+}

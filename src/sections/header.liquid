@@ -1,20 +1,10 @@
-<div data-section-id="{{ section.id }}" data-section-type="header-section">
+<div data-section-id="{{ section.id }}" data-section-type="header-section" class="site-header">
   {% if template.name == 'index' %}
     <header itemscope itemtype="http://schema.org/Organization">
   {% else %}
-    <header class="h1" itemscope itemtype="http://schema.org/Organization">
+    <header class="solid-header" itemscope itemtype="http://schema.org/Organization">
   {% endif %}
-      <a href="/" itemprop="url" class="site-logo{% if section.settings.logo != blank %} site-header__logo-image{% endif %}">
-        {% if section.settings.logo != blank %}
-          {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-          <img src="{{ section.settings.logo | img_url: image_size }}"
-                srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-                alt="{{ section.settings.logo.alt | default: shop.name }}"
-                itemprop="logo">
-        {% else %}
-          {{ shop.name }}
-        {% endif %}
-      </a>
+      <a href="/" itemprop="url" class="site-logo"></a>
       <nav role="navigation">
         <ul class="site-nav">
           {% for link in linklists[section.settings.main_linklist].links %}
@@ -42,58 +32,17 @@
         </ul>
       </nav>
       <ul class="account-links">
-        <li>{{ 'images/search-icon-white.png' | asset_url | img_tag }}</li>
-        <li></li>
-        <li></li>
+        <li>
+          <a href="#" itemprop="url" class="search-icon"></a>
+        </li>
+        <li>
+          <a href="/account" itemprop="url" class="profile-icon"></a>
+        </li>
+        <li>
+          <a href="#" itemprop="url" class="cart-icon"></a>
+        </li>
       </ul>
     </header>
-
-    <a href="/cart">
-      {% include 'icon-cart' %}
-      {{ 'layout.cart.title' | t }}
-      ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
-    </a>
-
-    {% if shop.customer_accounts_enabled %}
-      <ul>
-        {% if customer %}
-          <li>
-            {% if customer.first_name != blank %}
-              {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-              {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-            {% else %}
-              <a href="/account">{{ 'layout.customer.account' | t }}</a>
-            {% endif %}
-          </li>
-          <li>
-            {{ 'layout.customer.log_out' | t | customer_logout_link }}
-          </li>
-        {% else %}
-          <li>
-            {{ 'layout.customer.log_in' | t | customer_login_link }}
-          </li>
-          <li>
-            {{ 'layout.customer.create_account' | t | customer_register_link }}
-          </li>
-        {% endif %}
-      </ul>
-    {% endif %}
-
-    <form action="/search" method="get" role="search">
-      <label for="Search" class="label-hidden">
-        {{ 'general.search.placeholder' | t }}
-      </label>
-      <input type="search"
-             name="q"
-             id="Search"
-             value="{{ search.terms | escape }}"
-             placeholder="{{ 'general.search.placeholder' | t }}">
-      <button type="submit" class="btn">
-        {% include 'icon-search' %}
-        <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
-      </button>
-    </form>
-
   </header>
 </div>
 
@@ -101,21 +50,6 @@
   {
     "name": "Header",
     "settings": [
-      {
-        "type": "image_picker",
-        "id": "logo",
-        "label": "Logo image"
-      },
-      {
-        "type": "range",
-        "id": "logo_max_width",
-        "min": 50,
-        "max": 450,
-        "step": 10,
-        "unit": "px",
-        "label": "Custom logo width",
-        "default": 250
-      },
       {
         "type": "link_list",
         "id": "main_linklist",

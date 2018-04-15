@@ -1,0 +1,107 @@
+
+<div 
+  data-section-id="{{ section.id }}" 
+  data-section-type="hero-section"
+  {% if section.settings.full_height == true %} class="full-height" {% endif %}
+  style="background-image: url({{ section.settings.hero_image | img_url: '4472x' }});">
+
+  {% for block in section.blocks %}
+  <div class="hero-content-container {{ block.settings.alignment }}" {{ block.shopify_attributes }}>
+    <div class="small-header">{{ block.settings.small_header }}</div>
+    <div class="main-header">{{ block.settings.main_header }}</div>
+    <div class="body-content">{{ block.settings.body }}</div>
+
+    {% if block.settings.show_cta_button == true %}
+    <a class="call-to-action-container" href="{{ block.settings.cta_url }}">
+      <div class="call-to-action-button">
+        {{ block.settings.cta_text }}
+      </div>
+    </a>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+</div>
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Hero Image"
+      },
+      {
+        "type": "checkbox",
+        "id": "full_height",
+        "label": "Full Screen Hero?"
+      }
+    ],
+    "max_blocks": 1,
+    "blocks": [
+      {
+        "type": "hero_text",
+        "name": "Hero Content",
+        "settings": [
+          {
+            "type": "header",
+            "content": "Content Layout"
+          },
+          {
+            "type": "select",
+            "id": "alignment",
+            "options": [
+              { "value": "content-align-right", "label": "Right"},
+              { "value": "content-align-left", "label": "Left"}
+            ],
+            "label": "Alignment"
+          },
+          {
+            "type": "header",
+            "content": "Hero Content"
+          },
+          {
+            "id": "small_header",
+            "type": "text",
+            "label": "Small Header"
+          },
+          {
+            "id": "main_header",
+            "type": "text",
+            "label": "Main Header"
+          },
+          {
+            "id": "body",
+            "type": "textarea",
+            "label": "Body Content"
+          },
+          {
+            "type": "header",
+            "content": "Call To Action"
+          },
+          {
+            "id": "show_cta_button",
+            "type": "checkbox",
+            "label": "Show Call To Action Button?"
+          },
+          {
+            "id": "cta_text",
+            "type": "text",
+            "label": "Button Label"
+          },
+          {
+            "id": "cta_url",
+            "type": "url",
+            "label": "Button Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Image",
+        "category": "Layout"
+      }
+    ]
+  }
+{% endschema %}

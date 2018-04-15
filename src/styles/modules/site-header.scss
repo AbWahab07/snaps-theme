@@ -1,14 +1,57 @@
 /*================ Site Header ================*/
+.site-header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 header {
+  height: 80px;
   display: flex;
   flex-direction: row;
-  background: #000;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 35px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 
   .site-logo {
+    width: 120px;
+    height: 23px;
+    background: url(../assets/logo-white.png) no-repeat center;
+  }
 
-    img {
-      display: block;
-      width: 100%;
+  .account-links {
+    margin: 0;
+    padding: 0;
+
+    li { 
+      display: inline-block;
+      margin: 0px 10px;
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    .search-icon {
+      width: 24px;
+      height: 24px;
+      background: url(../assets/search-icon-white.png) no-repeat center;
+    }
+
+    .profile-icon {
+      width: 24px;
+      height: 24px;
+      background: url(../assets/account-icon-white.png) no-repeat center;
+    }
+
+    .cart-icon {
+      width: 24px;
+      height: 24px;
+      background: url(../assets/cart-icon-white.png) no-repeat center;
     }
   }
 
@@ -20,6 +63,16 @@ header {
     li {
       display: inline;
       font-family: 'Courier Prime';
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        margin: 0px 20px;
+      }
     }
+  }
+
+  &.solid-header { 
+    background: #fff;
   }
 }
