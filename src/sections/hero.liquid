@@ -7,7 +7,7 @@
   {% for block in section.blocks %}
   <div class="hero-content-container {{ block.settings.alignment }}" {{ block.shopify_attributes }}>
     <div class="small-header">{{ block.settings.small_header }}</div>
-    <div class="main-header">{{ block.settings.main_header }}</div>
+    <h2 class="main-header">{{ block.settings.main_header }}</h2>
     <div class="body-content">{{ block.settings.body }}</div>
 
     {% if block.settings.show_cta_button == true %}
