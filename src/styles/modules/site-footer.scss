@@ -1,0 +1,68 @@
+.site-footer {
+  footer {
+    background: url(../assets/footer-bg.png?v123334) no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 60px;
+
+    .footer-content-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        font-family: $nav-font;
+
+        li {
+          padding-bottom: 20px;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: none;
+          }
+        }
+      }
+      
+      .navigation-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        ul {
+          padding-right: 80px;
+        }
+      }
+
+      .corporate-info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        ul {
+          padding-left: 80px;
+          
+          li {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .social-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .tag {
+        font-family: $base-font;
+        margin-bottom: 20px;
+        font-weight: bold;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
