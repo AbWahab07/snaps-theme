@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
@@ -15,7 +16,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 35px;
+  background-color: transparent;
   border-bottom: 1px solid rgba(255,255,255,.2);
+  transition: background-color .5s;
 
   .site-logo {
     width: 120px;
@@ -75,5 +78,31 @@ header {
 
   &.solid-header { 
     background: #fff;
+    border-bottom: 1px solid #b4b4b4;
+
+    .site-logo {
+      background: url(../assets/logo-black.png) no-repeat center;
+    }
+  
+    .account-links {
+      
+      .search-icon {
+        background: url(../assets/search-icon-black.png) no-repeat center;
+      }
+  
+      .profile-icon {
+        background: url(../assets/account-icon-black.png) no-repeat center;
+      }
+  
+      .cart-icon {
+        background: url(../assets/cart-icon-black.png) no-repeat center;
+      }
+    }
+  
+    .site-nav {
+      a {
+        color: #191919;
+      }
+    }
   }
 }

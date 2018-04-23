@@ -1,0 +1,24 @@
+<div class="product-block{% if product.tags contains 'Obscene' %} obscene{% endif %}" data-product-id={{product.id}}>
+  <div class="product-topbar">
+    {% if product_quantity == 0 %}
+      <div class="quantity-tag sold-out">SOLD OUT</div>
+    {% elsif product_quantity > 3 %}
+      <div class="quantity-tag new">NEW</div>
+    {% else %}
+      <div class="quantity-tag few-left">FEW LEFT</div>
+    {% endif %}
+  </div>
+  <div class="product-image">
+    <img src="{{product.featured_image | img_url: '800x' }}" />
+  </div>
+  <div class="product-bottombar">
+    <div class="product-data">
+      <div class="product-name">{{product.title}}</div>
+      <div class="product-sku">{{product.variants[0].sku}}</div>
+    </div>
+    <div class="product-action">
+      <div class="product-price">{{product.price | money_without_trailing_zeros | remove: ',' }}</div>
+      <div class="add-to-cart-button"></div>
+    </div>
+  </div>
+</div>
