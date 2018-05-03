@@ -44,6 +44,9 @@
       </ul>
     </header>
   </header>
+  {% if template contains 'collection' or template contains 'product' %}
+  {% include 'breadcrumbs' %}
+  {% endif %}
 </div>
 
 {% schema %}
