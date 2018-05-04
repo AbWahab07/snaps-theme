@@ -1,8 +1,86 @@
 .product-page {
   padding-top: 80px;
+  display: flex;
 
   .product-container {
     margin-top: 80px;
     padding: 35px;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    .product-image {
+      flex: 1;
+      background: #f1f1ea;
+      margin-right: 15px;
+    }
+    
+    .product-data {
+      flex: 1;
+      font-family: $base-font;
+      font-size: 18px;
+      margin-left: 15px;
+
+      .product-short-description {
+        margin-bottom: 15px;
+      }
+
+      .product-name {
+        font-family: $header-font;
+        font-size: 58px;
+        font-weight: normal;
+        margin: 0px 0px 15px;
+      }
+
+      .product-price {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      .add-to-cart-container {
+        margin-bottom: 60px;
+        
+        .add-to-cart-button {
+          height: 60px;
+          background: #191919;
+          border: none;
+          color: #fff;
+          font-size: 16px;
+          font-family: $header-font;
+          text-transform: uppercase;
+          padding: 6px 48px 0;
+        }
+      }
+
+      .sibling-products-container {
+        margin-bottom: 60px;
+        display: flex;
+        flex-direction: row;
+
+        a {
+          display: flex;
+          align-items: center;
+          width: 48px;
+          height: 48px;
+          overflow: hidden;
+          padding: 2px;
+          margin-right: 10px;
+          border: 1px solid rgba(33,33,33,.2);
+
+          &:active {
+            box-shadow: 0px 0px 0px 2px;
+          }
+
+          &.Obscene {
+            background: #191919;
+          }
+
+          img {
+            max-width: none;
+            margin: 15px 0 0 -10px;
+          }
+        }        
+      }
+    }
   }
 }

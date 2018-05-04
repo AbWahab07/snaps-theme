@@ -13,8 +13,8 @@
   </div>
   <div class="product-bottombar">
     <div class="product-data">
-      <div class="product-name">{{product.title}}</div>
-      <div class="product-sku">{{product.variants[0].sku}}</div>
+      <div class="product-short-description">{{product.title}}</div>
+      <div class="product-name">{{product.variants[0].sku}}</div>
     </div>
     <div class="product-action">
       <div class="product-price">{{product.price | money_without_trailing_zeros | remove: ',' }}</div>
