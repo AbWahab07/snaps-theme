@@ -39,11 +39,9 @@
       <div class="sibling-products-container">
       {% for collection in product.collections %}
         {% for sibling in collection.products %}
-          {% unless sibling.id == product.id %}
-        <a href="{{ sibling.url}}" class="{{ sibling.tags }}">
+        <a href="{{ sibling.url}}" class="{{ sibling.tags }} {% if sibling.title == product.title %}selected{% endif %}">
           {{ sibling.featured_image | img_url: 'x60' | img_tag }}
         </a>
-          {% endunless %}
         {% endfor %}
       {% endfor %}
       </div>
@@ -52,6 +50,7 @@
         <div class="rte">
           {{ product.description }}
         </div>
+        {{ current_variant.barcode }}
       </div>
 
     </div>
