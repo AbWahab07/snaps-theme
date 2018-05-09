@@ -15,21 +15,21 @@
 <div data-section-id="breadcrumbs" data-section-type="breadcrumbs">
   <ul class="breadcrumb-navigation">
     <li>
-      <a href="#" class="{{ breadcrumb_root_style }}">{{ breadcrumb_root }}</a>
+      <a href="/collections" class="{{ breadcrumb_root_style }}">{{ breadcrumb_root }}</a>
     </li>
     {% if template == 'collection' %}
     <li>></li>
     <li>
-      <a href="#" class="selected">{{ collection.title }} Series</a>
+      <a href="{{ collection.url }}" class="selected">{{ collection.title }} Series</a>
     </li>
     {% elsif template == 'product' %}
     <li>></li>
     <li>
-      <a href="#">{{ product.collections[0].title }} Series</a>
+      <a href="{{ product.collections[0].url }}">{{ product.collections[0].title }} Series</a>
     </li>
     <li>></li>
     <li>
-      <a href="#" class="selected">{{ product.selected_or_first_available_variant.sku }}</a>
+      <a href="{{ product.url }}" class="selected">{{ product.selected_or_first_available_variant.sku }}</a>
     </li>
     {% endif %}
   </ul>

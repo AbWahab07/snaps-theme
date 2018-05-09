@@ -14,6 +14,9 @@ window.theme = window.theme || {};
 /*================ Sections ================*/
 // =require sections/product.js
 
+/*================ Snippets ================*/
+// =require snippets/product-block.js
+
 /*================ Templates ================*/
 // =require templates/index.js
 // =require templates/customers-addresses.js

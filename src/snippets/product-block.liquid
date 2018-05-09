@@ -1,4 +1,7 @@
-<div class="product-block{% if product.tags contains 'Obscene' %} obscene{% endif %}" data-product-id={{product.id}}>
+{%- assign product_quantity = product.variants[0].inventory_quantity -%}
+<div class="product-block{% if product.tags contains 'Obscene' %} obscene{% endif %}" 
+  data-product-id={{product.id}}
+  data-product-url={{product.url}}>
   <div class="product-topbar">
     {% if product_quantity == 0 %}
       <div class="quantity-tag sold-out">SOLD OUT</div>

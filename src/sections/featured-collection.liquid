@@ -24,7 +24,6 @@
   <div class="collection-products">
     <div class="product-showcase">
       {% for product in collection.products limit: 4 %}
-        {%- assign product_quantity = product.variants[0].inventory_quantity -%}
         {% include 'product-block' %}  
       {% endfor %}
     </div>
