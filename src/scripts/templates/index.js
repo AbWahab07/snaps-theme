@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var header = $('.site-header header.on-hero')[0];
+  var header = $('div.site-header')[0];
   var scrollOffset = $(window).scrollTop();
 
   if (scrollOffset > 150) {
@@ -12,13 +12,15 @@ $(document).ready(function() {
 
     scrollOffset = $(window).scrollTop();
 
-    if (scrollOffset > 150) {
-      if (!$(header).hasClass('solid-header')) 
-        $(header).addClass('solid-header');
-    }
-    else {
-      if ($(header).hasClass('solid-header'))
-        $(header).removeClass('solid-header');
+    if ($(header).hasClass('on-hero')) {
+      if (scrollOffset > 150) {
+        if (!$(header).hasClass('solid-header')) 
+          $(header).addClass('solid-header');
+      }
+      else {
+        if ($(header).hasClass('solid-header'))
+          $(header).removeClass('solid-header');
+      }
     }
   });
 

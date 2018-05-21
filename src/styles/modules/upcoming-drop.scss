@@ -7,6 +7,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: $width-site;
+    margin: 0 auto;
 
     .drop-heading {
       font-family: $header-font;

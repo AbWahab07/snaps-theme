@@ -17,17 +17,19 @@ div[data-section-type="hero-section"] {
       flex-direction: column;
       color: #fff;
       justify-content: center;
-      width: 420px;
+      max-width: $width-site;
+      width: 100%;
+      margin: 0 auto;
   
       &.content-align-right {
-        margin-right: 15%;
+        padding-right: 10%;
         align-self: flex-end;
         align-items: flex-end;
         text-align: right;
       }
   
       &.content-align-left {
-        margin-left: 15%;
+        padding-left: 10%;
         align-self: flex-start;
         align-items: flex-start;
         text-align: left;
@@ -47,6 +49,7 @@ div[data-section-type="hero-section"] {
       }
   
       .body-content {
+        max-width: 420px;
         font-family: 'Courier New';
         font-size: 28px;
         color: #b4b4b4;

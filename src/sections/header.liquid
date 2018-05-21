@@ -1,9 +1,12 @@
-<div data-section-id="{{ section.id }}" data-section-type="header-section" class="site-header">
-  {% if template.name == 'index' %}
-    <header class="on-hero" itemscope itemtype="http://schema.org/Organization">
-  {% else %}
-    <header class="solid-header" itemscope itemtype="http://schema.org/Organization">
-  {% endif %}
+{% if template.name == 'index' %}
+  {% assign header_class = "on-hero" %}
+{% else %}
+  {% assign header_class = "solid-header" %}
+{% endif %}
+
+<div data-section-id="{{ section.id }}" data-section-type="header-section" class="site-header {{ header_class }}">
+  <div class="header-container">
+    <div class="header" itemscope itemtype="http://schema.org/Organization">
       <a href="/" itemprop="url" class="site-logo"></a>
       <nav role="navigation">
         <ul class="site-nav">
@@ -42,8 +45,8 @@
           <a href="#" itemprop="url" class="cart-icon"></a>
         </li>
       </ul>
-    </header>
-  </header>
+    </div>
+  </div>
   {% include 'breadcrumbs' %}
 </div>
 
