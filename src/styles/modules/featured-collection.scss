@@ -1,7 +1,7 @@
 .featured-collection-container {
   display: flex;
   flex-direction: row;
-  padding: 100px 0;
+  padding: 100px 30px;
   max-width: $width-site;
   margin: 0 auto;
 
@@ -48,6 +48,7 @@
       font-size: 18px;
       color: #8a8a8a;
       margin-bottom: 40px;
+      padding-right: 30px;
 
       p {
         margin: 0;
@@ -84,9 +85,12 @@
     max-width: 50%;
     flex-direction: column;
 
-    .product-showcase {
-      display: flex;
-      flex-flow: row wrap;
+    .product-grid {
+    
+      .product-block-container {
+        flex: 1 0 50%;
+        max-width: 50%;
+      }
     }
 
     .view-series {
@@ -96,7 +100,7 @@
 
       a {
         color: #191919;
-        font-family: 'HelveticaNeueLTCom';
+        font-family: $header-font;
         font-size: 24px;
         text-decoration: none;
         line-height: 36px;

@@ -79,6 +79,8 @@ div[data-section-type="hero-section"] {
   &.header-height {
     background-size: cover;
     background-position: center;
-    height: 500px;
+    height: 300px;
+    flex: 1;
+    width: 100%;
   }
 }
