@@ -1,7 +1,10 @@
+{% assign products = collections['all'].products %}
+{% assign status_filter = 'coming-soon' %}
+
 <div class="page-container">
   {% section 'drops-header' %}
   <div class="page-content-container centered">
-    {{ page.content }}
+    {% include 'product-grid' %}
   </div>
   {% section 'page-navigation' %}
 </div>

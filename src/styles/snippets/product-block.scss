@@ -31,7 +31,7 @@
           }
         }
 
-        &.sold-out {
+        &.sold-out, &.coming-soon {
           color: #fff;
           background: #000;
           padding: 0px 7px;
@@ -94,7 +94,7 @@
           }
         }
     
-        &.sold-out {
+        &.sold-out, &.coming-soon {
           color: #000;
           background: #fff;
         }      
