@@ -26,9 +26,9 @@
     </a>
     {% endif %}
 
-    {% if block.settings.show_subscribe_form == true %}
+    {% if block.settings.show_subscribe_form %}
     <div>
-      MAILCHIMP FORM GOES HERE
+      {% include 'subscribe-form' %}
     </div>
     {% endif %}
   </div>
