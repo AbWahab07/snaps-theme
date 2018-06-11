@@ -5,7 +5,9 @@
   style="background: {{section.settings.background_color}};">
   <div class="drop-content-container" style="color: {{section.settings.text_color}};">
     <h2 class="drop-heading">{{section.settings.heading}}</h2>
+    {% if section.settings.image %}
     <img src="{{ section.settings.image | img_url: 'x100'}}" />
+    {% endif %}
     <div class="drop-content">
       {{section.settings.content}}
     </div>
