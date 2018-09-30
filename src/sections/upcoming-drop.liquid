@@ -6,13 +6,13 @@
   <div class="drop-content-container" style="color: {{section.settings.text_color}};">
     <h2 class="drop-heading">{{section.settings.heading}}</h2>
     {% if section.settings.image %}
-    <img src="{{ section.settings.image | img_url: 'x100'}}" />
+    <img src="{{ section.settings.image | img_url: 'original'}}" />
     {% endif %}
     <div class="drop-content">
       {{section.settings.content}}
     </div>
     <a href="{{section.settings.page_url}}" class="view-drop-link" style="color: {{section.settings.text_color}}">
-      View Drops
+      {{section.settings.link_text}}
     </a>
   </div>
 </div>
@@ -57,6 +57,11 @@
         "id": "page_url",
         "type": "url",
         "label": "URL"
+      },
+      {
+        "id": "link_text",
+        "type": "text",
+        "label": "Link Text"
       }
     ],
     "presets": [

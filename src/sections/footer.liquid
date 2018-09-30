@@ -2,43 +2,41 @@
 {% assign right_linklist_handles = 'footer-corporate' | split: ',' %}
 
 <div data-section-id="{{ section.id }}" data-section-type="footer-section" class="site-footer">
-  <footer>
-    <div class="footer-content-container">
-      <div class="navigation-container">
-        {% for list in left_linklist_handles %}
-        <ul>
-          {% for link in linklists[list].links %}
-          <li>
-            <a href="{{link.url}}">{{link.title}}</a>
-          </li>
-          {% endfor %}
-        </ul>
+  <div class="footer-content-container">
+    <div class="navigation-container">
+      {% for list in left_linklist_handles %}
+      <ul>
+        {% for link in linklists[list].links %}
+        <li>
+          <a href="{{link.url}}">{{link.title}}</a>
+        </li>
         {% endfor %}
-      </div>
-      <div class="corporate-info-container">
-        {% for list in right_linklist_handles %}
-        <ul>
-          <li>
-            &copy; 2018 SNAPS LTD.
-          </li>
-          {% for link in linklists[list].links %}
-          <li>
-            <a href="{{link.url}}">{{link.title}}</a>
-          </li>
-          {% endfor %}
-        </ul>
+      </ul>
+      {% endfor %}
+    </div>
+    <div class="corporate-info-container">
+      {% for list in right_linklist_handles %}
+      <ul>
+        <li>
+          &copy; 2018 SNAPS LTD.
+        </li>
+        {% for link in linklists[list].links %}
+        <li>
+          <a href="{{link.url}}">{{link.title}}</a>
+        </li>
         {% endfor %}
-      </div>
+      </ul>
+      {% endfor %}
     </div>
-    <div class="social-bar">
-      <div class="tag">SNAPS NYC</div>
-      <div class="social-icons">
-        <a href="//instagram.com/snaps.ltd">
-          {{ "instagram.png" | asset_img_url: "30x30" | img_tag }}
-        </a>
-      </div>
+  </div>
+  <div class="social-bar">
+    <div class="tag">SNAPS NYC</div>
+    <div class="social-icons">
+      <a href="{{ settings.social_instagram_link }}">
+        {{ "instagram.png" | asset_img_url: "30x30" | img_tag }}
+      </a>
     </div>
-  </footer>
+  </div>
 </div>
 
 {% schema %}

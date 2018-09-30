@@ -1,17 +1,17 @@
-.site-footer {
-  background: url(../assets/footer-bg.png?v123334) no-repeat;
-  background-size: cover;
+footer {
 
-  footer {
+  .site-footer {
+    background: url(../assets/footer-bg.png?v123334) no-repeat;
+    background-size: cover;
     color: #fff;
-    padding: 60px;
-    max-width: $width-site;
-    margin: 0 auto;
 
     .footer-content-container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      padding: 60px;
+      max-width: $width-site;
+      margin: 0 auto;
 
       ul {
         list-style: none;
@@ -59,6 +59,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding-bottom: 30px;
 
       .tag {
         font-family: $base-font;

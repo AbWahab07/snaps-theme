@@ -62,14 +62,16 @@
 </head>
 
 <body id="{{ page_title | handle }}" class="template-{{ template.name | handle }}">
-  <header>
-    {% section 'header' %}
-  </header>
-  <main role="main" id="MainContent">
-    {{ content_for_layout }}
-  </main>
-  <footer>
-    {% section 'footer' %}
-  </footer>
+  <div class="site-container">
+    <header>
+      {% section 'header' %}
+    </header>
+    <main role="main" id="MainContent">
+      {{ content_for_layout }}
+    </main>
+    <footer>
+      {% section 'footer' %}
+    </footer>
+  </div>
 </body>
 </html>
