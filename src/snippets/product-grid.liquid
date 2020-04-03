@@ -1,7 +1,0 @@
-<div class="product-grid">
-{% for product in products %}
-  {% if product.metafields.product.status == status_filter || status_filter == 'all' %}
-    {% include 'product-block' %}
-  {% endif %}
-{% endfor %}
-</div>
