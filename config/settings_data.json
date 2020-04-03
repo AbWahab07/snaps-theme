@@ -1,0 +1,807 @@
+{
+  "current": {
+    "color_text": "#383838",
+    "color_body_text": "#171616",
+    "color_sale_text": "#e42f1b",
+    "color_button": "#171616",
+    "color_button_text": "#efefec",
+    "color_small_button_text_border": "#1a33b4",
+    "color_text_field_text": "#171616",
+    "color_text_field_border": "#1a33b4",
+    "color_text_field": "#efefec",
+    "color_image_overlay_text": "#ffffff",
+    "color_image_overlay": "#ffffff",
+    "image_overlay_opacity": 0,
+    "color_borders": "#383838",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "roboto_condensed_n7",
+    "type_header_base_size": 20,
+    "type_base_font": "courier_new_n4",
+    "type_base_size": 14,
+    "type_bold_product_titles": false,
+    "share_image": "shopify:\/\/shop_images\/snap03957_small2.jpg",
+    "share_facebook": false,
+    "share_twitter": false,
+    "share_pinterest": false,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/snaps.ltd\/",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/snaps.ltd\/?hl=en",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/Fav-01.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-125px-BLACK.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#efefec",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Fjalla One",
+    "checkout_body_font": "Arvo",
+    "checkout_accent_color": "#1a33b4",
+    "checkout_button_color": "#1a33b4",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-125px-BLACK_4aaa91cd-8c8c-41b4-a033-afd4b8d9b256.png",
+          "logo_white": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-250px.png",
+          "logo_max_width": 125,
+          "main_linklist": "main-navigation-nbaa",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "FREE STANDARD SHIPPING ON ALL DOMESTIC ORDERS",
+          "message_link": "shopify:\/\/collections\/all",
+          "color_bg": "#2229bd",
+          "color_text": "#ffffff"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/NBA9.16.14_1__retouch_v1.jpg",
+          "alignment": "center",
+          "pre_title": "",
+          "title": "",
+          "text": "<p><strong>&nbsp;<\/strong><\/p>",
+          "hero_size": "large",
+          "text_size": "large",
+          "text_alignment": "right",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/collections\/nbaa",
+          "color_hero_button": "#1b34ca",
+          "color_hero_button_text": "#f5f5ec"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Stay up to date",
+              "color_newsletter_submit": "#1b34ca",
+              "color_newsletter_submit_text": "#f2f3e9"
+            }
+          },
+          "1545409826851": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "text": ""
+            }
+          },
+          "link_list": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "main-menu"
+            }
+          },
+          "link_list-1": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer-ordering"
+            }
+          },
+          "1544005077965": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer-corporate"
+            }
+          }
+        },
+        "block_order": [
+          "newsletter",
+          "1545409826851",
+          "link_list",
+          "link_list-1",
+          "1544005077965"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "image": "",
+          "alignment": "center",
+          "color_footer_bg": "#151515",
+          "color_footer_text": "#efefec",
+          "copyright_title": "All rights reserved. Copyright 2018 Snaps Ventures Inc.",
+          "copyright_text": "<p><strong>International Design &amp; Utility Patents by Snaps Ventures Inc.<\/strong><\/p>"
+        }
+      },
+      "1542790877702": {
+        "type": "featured-products",
+        "blocks": {
+          "1542790923411": {
+            "type": "product",
+            "settings": {
+              "product": "850-lnk-01"
+            }
+          },
+          "1542791351979": {
+            "type": "product",
+            "settings": {
+              "product": "850-gtr-03"
+            }
+          },
+          "1581690663938": {
+            "type": "product",
+            "settings": {
+              "product": "gold-crown"
+            }
+          },
+          "1581690708545": {
+            "type": "product",
+            "settings": {
+              "product": "greater-ostrich-leather"
+            }
+          }
+        },
+        "block_order": [
+          "1542790923411",
+          "1542791351979",
+          "1581690663938",
+          "1581690708545"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/snap03957_small2.jpg",
+          "pre_title": "",
+          "title": "ORIGINALS",
+          "text": "",
+          "align_text": "left",
+          "url_text": "",
+          "url_link": "",
+          "url_text_second": "",
+          "url_link_second": "shopify:\/\/collections\/cuban-link"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "show_vendor": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "settings": {
+          "show_related_products": true,
+          "related_title": "RELATED"
+        }
+      },
+      "custom-content-about": {
+        "type": "custom-content-about",
+        "blocks": {
+          "1544464786453": {
+            "type": "text",
+            "settings": {
+              "title": "CUSTOM SNAPS",
+              "size_heading": 20,
+              "color_heading": "#1a33b4",
+              "text": "<p><\/p>\n<p>Your design. Your style. Your crown. Bring your vision to life with our design team.<\/p>\n<p><\/p>\n<p>To enquire about your own custom Snap, email <a href=\"mailto:customs@snaps.ltd\">Customs@SNAPS.Ltd<\/a> and we will begin the design process with you.<\/p>\n<p><\/p>\n<p>*Please, note that for all custom orders; we&rsquo;ll need a 30% non-refundable deposit to begin production.<\/p>\n<p><\/p>",
+              "size_text": 14,
+              "color_text": "#383838",
+              "width": "100%",
+              "alignment": "bottom-middle",
+              "align_text": "left"
+            }
+          },
+          "1544464919521": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Web_squarish.jpg",
+              "width": "100%",
+              "alignment": "center"
+            }
+          },
+          "1544554826212": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "size_heading": 32,
+              "color_heading": "#eddecd",
+              "text": "<p>All rights reserved. Copyright 2018 Snaps Ventures Inc.<\/p>",
+              "size_text": 10,
+              "color_text": "#7c7c7c",
+              "width": "50%",
+              "alignment": "top-middle",
+              "align_text": "left"
+            }
+          },
+          "1544555873184": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "size_heading": 32,
+              "color_heading": "#eddecd",
+              "text": "<p>International Design &amp; Utility Patents by Snaps Ventures Inc.<\/p>\n<p><\/p>\n<p>Contact@SNAPS.ltd<\/p>",
+              "size_text": 10,
+              "color_text": "#7c7c7c",
+              "width": "50%",
+              "alignment": "top-middle",
+              "align_text": "right"
+            }
+          }
+        },
+        "block_order": [
+          "1544464786453",
+          "1544464919521",
+          "1544554826212",
+          "1544555873184"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": true
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "list",
+          "blog_show_author": false,
+          "blog_show_date": true
+        }
+      },
+      "1548783974818": {
+        "type": "collection",
+        "settings": {
+          "title": "",
+          "collection": "nbaa-crisp",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "1548784080288": {
+        "type": "featured-products",
+        "blocks": {
+          "1548784080288-0": {
+            "type": "product",
+            "settings": {
+              "product": "as19"
+            }
+          },
+          "1548784273912": {
+            "type": "product",
+            "settings": {
+              "product": "crisp-lakers"
+            }
+          },
+          "1548784285122": {
+            "type": "product",
+            "settings": {
+              "product": "limited-edition-2019-nba-champions-toronto-raptors-snap"
+            }
+          },
+          "1548784259772": {
+            "type": "product",
+            "settings": {
+              "product": "dwyanewade-limitededitionsnap"
+            }
+          }
+        },
+        "block_order": [
+          "1548784080288-0",
+          "1548784273912",
+          "1548784285122",
+          "1548784259772"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/SNAPS-Diagram_bulls-002l-sm.jpg",
+          "pre_title": "",
+          "title": "",
+          "text": "<p><\/p>\n<p><\/p>\n<p><\/p>\n<p><\/p>",
+          "align_text": "left",
+          "url_text": "",
+          "url_link": "",
+          "url_text_second": "",
+          "url_link_second": ""
+        }
+      },
+      "1574862303212": {
+        "type": "image-bar",
+        "blocks": {
+          "1574862303212-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/70209842_2395977077145266_1357877036182595901_n3.jpg",
+              "alignment": "center",
+              "link": "shopify:\/\/products\/850-lnk-01",
+              "cta_label": ""
+            }
+          },
+          "1574862303212-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gettyimages-1135867587.jpg",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1574862303212-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SNAPS-Matt_in_seattle-001.jpg",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "1574862303212-0",
+          "1574862303212-1",
+          "1574862303212-2"
+        ],
+        "settings": {
+          "section_height": "medium"
+        }
+      },
+      "1574862330024": {
+        "type": "quotes",
+        "blocks": {
+          "1574862330024-0": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>\"I love the product's originality &amp; authenticity. Immediately after i saw it, ideas began pouring into my head about what to do with them. I love how SNAPS don&rsquo;t take much to stand out, yet they are so versatile.\"<\/p>",
+              "author": "Shaun M"
+            }
+          },
+          "1574862330024-1": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>&ldquo;I love it! Really stands out and makes the hat look much better also the packaging for this product is incredible not what I was expecting I was impressed by the quality of packaging and I'll definitely be ordering from SNAPS again!&rdquo;<\/p>\n<p><\/p>",
+              "author": "Balal C."
+            }
+          },
+          "1574862330024-2": {
+            "type": "quote",
+            "settings": {
+              "quote": "<p>\"These are so unique.&nbsp;A really interesting way to express your love for a team or particular style. It&rsquo;s kind of like an accessory for your accessories...like a belt<br>buckle for your hat but waaaay cooler.\"<\/p>",
+              "author": "Russell K"
+            }
+          }
+        },
+        "block_order": [
+          "1574862330024-0",
+          "1574862330024-1",
+          "1574862330024-2"
+        ],
+        "settings": {
+          "title": "Testimonials"
+        }
+      },
+      "1574862660510": {
+        "type": "rich-text",
+        "settings": {
+          "full_width": false,
+          "section_title": "WHO WE ARE",
+          "text": "<p>-----------------------------------<\/p>\n<p>We are all constantly revealing ourselves. Everything we say, every outfit we wear, everything we create and put out in the world communicates who we are and helps make connections that are important to each of us. Each subtle accent or deep cut- the details make our stories uniquely our own.<\/p>\n<p><br>SNAPS exists to make a thoroughly original product that gives each of us a new way to show off what we love and connect with and the things we are passionate about.<\/p>\n<p><br>We all tell stories every day. You tell your story; we&rsquo;ll provide the details.<\/p>\n<p><br>SNAPS. Details matter.<\/p>\n<p><\/p>\n<p>-----------------------------------<\/p>\n<p><\/p>",
+          "text_size": "large"
+        }
+      },
+      "1581958059741": {
+        "type": "collection",
+        "settings": {
+          "title": "",
+          "collection": "nba-players-print",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "1582166383131": {
+        "type": "free-shipping",
+        "settings": {}
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "blog_show_author": false,
+          "blog_show_date": true,
+          "show_share_buttons": true
+        }
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "1582166383131",
+      "1548784080288",
+      "1581958059741",
+      "1548783974818",
+      "1574862330024",
+      "1542790877702",
+      "1574862303212",
+      "1574862660510"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "link_list-1": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "link_list-1",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "autoplay": true,
+            "autoplay_speed": 6,
+            "slideshow_height": "medium",
+            "text_size": "medium"
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "show_vendor": false
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "link_list-1": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "link_list-1",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}
