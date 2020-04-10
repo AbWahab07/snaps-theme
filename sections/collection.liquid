@@ -1,7 +1,7 @@
 <div class="page-width">
   {% if section.settings.title != blank %}
     <div class="section-header text-center">
-      <h2>{{ section.settings.title | escape }}</h2>
+      <h3>{{ section.settings.title | escape }}</h3>
     </div>
   {% endif %}
 
@@ -49,11 +49,11 @@
     {% endfor %}
   </ul>
 
-  {% if section.settings.show_view_all %}
+  {% if section.settings.show_view_all and section.settings.button_link != blank %}
     <hr class="hr--invisible" aria-hidden="true" />
     <div class="text-center">
-      <a href="{{ collection.url }}" class="btn" aria-label="{{ 'collections.general.view_all_label' | t: collection_name: collection.title }}">
-        {{ 'collections.general.view_all' | t }}
+      <a href="{{ section.settings.button_link }}" class="btn" aria-label="{{ section.settings.button_label }}">
+        {{ section.settings.button_label }}
       </a>
     </div>
   {% endif %}
@@ -64,81 +64,32 @@
 
 {% schema %}
 {
-  "name": {
-    "de": "Featured Kategorie",
-    "en": "Featured collection",
-    "es": "Colección destacada",
-    "fr": "Collection vedette",
-    "it": "Collezione in evidenza",
-    "ja": "特集コレクション",
-    "pt-BR": "Coleção em destaque"
-  },
+  "name": "Featured Collection",
   "class": "index-section",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": {
-        "de": "Titel",
-        "en": "Heading",
-        "es": "Título",
-        "fr": "En-tête",
-        "it": "Heading",
-        "ja": "見出し",
-        "pt-BR": "Título"
-      },
-      "default": {
-        "de": "Featured Kategorie",
-        "en": "Featured collection",
-        "es": "Colección destacada",
-        "fr": "Collection vedette",
-        "it": "Collezione in evidenza",
-        "ja": "特集コレクション",
-        "pt-BR": "Coleção em destaque"
-      }
+      "label": "Heading"
     },
     {
       "id": "collection",
       "type": "collection",
-      "label": {
-        "de": "Kategorie",
-        "en": "Collection",
-        "es": "Colección",
-        "fr": "Collection",
-        "it": "Collezione",
-        "ja": "コレクション",
-        "pt-BR": "Coleção"
-      }
+      "label": "Collection"
     },
     {
       "type": "range",
       "id": "grid",
-      "label": {
-        "de": "Produkte per Reihe",
-        "en": "Products per row",
-        "es": "Productos por fila",
-        "fr": "Produits par rangée",
-        "it": "Prodotti per riga",
-        "ja": "行あたりの商品数",
-        "pt-BR": "Produtos por linha"
-      },
+      "label": "Products per row",
       "min": 2,
       "max": 5,
       "step": 1,
-      "default": 3
+      "default": 4
     },
     {
       "type": "range",
       "id": "rows",
-      "label": {
-        "de": "Reihen",
-        "en": "Rows",
-        "es": "Filas",
-        "fr": "Rangées",
-        "it": "Righe",
-        "ja": "行",
-        "pt-BR": "Linhas"
-      },
+      "label": "Rows",
       "min": 1,
       "max": 5,
       "step": 1,
@@ -147,52 +98,30 @@
     {
       "type": "checkbox",
       "id": "show_vendor",
-      "label": {
-        "de": "Produkt-Lieferanten anzeigen",
-        "en": "Show product vendors",
-        "es": "Mostrar proveedores del producto",
-        "fr": "Afficher les vendeurs",
-        "it": "Mostra fornitori prodotto",
-        "ja": "商品の販売元を表示する",
-        "pt-BR": "Exibir fornecedores do produto"
-      },
+      "label": "Show product vendors",
       "default": false
     },
     {
       "type": "checkbox",
       "id": "show_view_all",
-      "label": {
-        "de": "'Alle anzeigen' Button anzeigen",
-        "en": "Show 'View all' button",
-        "es": "Mostrar el botón 'Ver todo'",
-        "fr": "Afficher le bouton “Tout voir”",
-        "it": "Mostra il pulsante \"Visualizza tutto\"",
-        "ja": "「すべて表示」ボタンを表示する",
-        "pt-BR": "Exibir botão 'Visualizar tudo'"
-      },
+      "label": "Show 'View All' button",
       "default": false
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Collection Link"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Collection Link Label"
     }
   ],
   "presets": [
     {
-      "name": {
-        "de": "Featured Kategorie",
-        "en": "Featured collection",
-        "es": "Colección destacada",
-        "fr": "Collection vedette",
-        "it": "Collezione in evidenza",
-        "ja": "特集コレクション",
-        "pt-BR": "Coleção em destaque"
-      },
-      "category": {
-        "de": "Kategorie",
-        "en": "Collection",
-        "es": "Colección",
-        "fr": "Collection",
-        "it": "Collezione",
-        "ja": "コレクション",
-        "pt-BR": "Coleção"
-      }
+      "name": "Featured Collection",
+      "category": "Collection"
     }
   ]
 }
