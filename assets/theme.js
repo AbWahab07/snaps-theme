@@ -3208,12 +3208,14 @@ theme.Quotes = (function() {
   };
   var defaults = {
     accessibility: true,
-    arrows: false,
+    arrows: true,
     dots: true,
     autoplay: false,
     touchThreshold: 20,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"></button>'
   };
 
   function Quotes(container) {

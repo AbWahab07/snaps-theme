@@ -11,19 +11,7 @@
 
 {%- assign money_price = price | money_without_trailing_zeros -%}
 
-<dl class="price{% if compare_at_price > price %} price--on-sale{% endif %}" data-price>
-
-  {% if section.settings.show_vendor %}
-  <div class="price__vendor">
-    <dt>
-      <span class="visually-hidden">{{ 'products.product.vendor' | t }}</span>
-    </dt>
-    <dd>
-      {{ product.vendor }}
-    </dd>
-  </div>
-  {% endif %}
-
+<div class="price{% if compare_at_price > price %} price--on-sale{% endif %}" data-price>
   <div class="price__regular">
     <dt>
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span>
@@ -49,4 +37,4 @@
       <span class="price-item__label" aria-hidden="true">{{ 'products.product.on_sale' | t }}</span>
     </dd>
   </div>
-</dl>
+</div>
