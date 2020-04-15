@@ -362,5 +362,7 @@
   },
   "date_formats": {
     "month_day_year": "%B %d, %Y"
-  }
+  },
+  "copyright_statement": "All rights reserved. Copyright © 2020 Snaps Ventures Inc.",
+  "patent_statement": "International Design & Utility Patents by Snaps Ventures Inc."
 }
