@@ -3229,7 +3229,8 @@ theme.Quotes = (function() {
     var mobileOptions = $.extend({}, defaults, {
       slidesToShow: 1,
       slidesToScroll: 1,
-      adaptiveHeight: true
+      adaptiveHeight: true,
+      arrows: false
     });
 
     config.slideCount = $slider.data('count');
@@ -3492,25 +3493,24 @@ $(theme.init);
 
     if($(window).width() > 750){
       $('.product-single__photos').slick({
-        arrows: true, 
+        arrows: true,
         dots: true,
         infinite: true,
         speed: 300,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
       });
     }else{
       $('.product-single__photos').slick({
         arrows: false, 
-        dots: true,
         infinite: true,
         speed: 300,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         adaptiveHeight: true,
         mobileFirst:true,
       });

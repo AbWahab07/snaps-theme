@@ -5,7 +5,6 @@
         {% for block in section.blocks %}
           <div class="quotes-slide--{{ block.id }}" {{ block.shopify_attributes }}>
             <div class="quote-content-container">
-              <img class="quote-image" src="{{block.settings.quote_image | img_url: '480x480' , crop: 'center'}}" />
               <blockquote class="quotes-slider__text text-center">
                 <span class="quote-icon">{% include 'icon-quote' %}</span>
                 {% if block.settings.quote != blank %}
@@ -15,6 +14,7 @@
                   <cite>{{ block.settings.author | escape }}</cite>
                 {% endif %}
               </blockquote>
+              <img class="quote-image" src="{{block.settings.quote_image | img_url: '480x480' , crop: 'center'}}" />
             </div>
           </div>
         {% endfor %}

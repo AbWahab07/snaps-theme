@@ -1,87 +1,96 @@
+{%- assign has_badge = false -%}
+
+{%- if product.tags contains 'new' -%}
+  {%- assign has_badge = true -%}
+  {%- assign badge_type = 'new' -%}
+  {%- assign badge_text = "NEW" -%}
+{%- endif -%}
+
+{%- for tag in product.tags -%}
+  {%- assign tag_parts = tag | split: ':' -%}
+  {%- if tag_parts[0] == 'limited' -%}
+    {%- assign has_badge = true -%}
+    {%- assign badge_type = 'limited' -%}
+    
+    {%- if tag_parts[1] != blank -%}
+      {%- capture badge_text -%}
+        LIMITED EDITION OF {{tag_parts[1] | strip }}
+      {%- endcapture -%}
+    {%- else -%}
+      {%- assign badge_text = "LIMITED EDITION" -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if product.tags contains 'soldout' -%}
+  {%- assign has_badge = true -%}
+  {%- assign badge_type = 'soldout' -%}
+  {%- assign badge_text = "SOLD OUT" -%}
+{%- endif -%}
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign product_image_zoom_size = '1024x1024' -%}
+{%- assign product_image_scale = '2' -%}
+{%- assign enable_zoom = section.settings.enable_zoom -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
+{%- assign img_width = 380 -%}
+{%- assign img_height = 430 -%}
+
+{%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+
 <div class="product-template__container page-width"
      id="ProductSection-{{ section.id }}"
      data-section-id="{{ section.id }}"
      data-section-type="product"
      data-enable-history-state="true"
      >
-  {% comment %}
-  Get first variant, or deep linked one
-  {% endcomment %}
-  {%- assign current_variant = product.selected_or_first_available_variant -%}
-  {%- assign product_image_zoom_size = '1024x1024' -%}
-  {%- assign product_image_scale = '2' -%}
-  {%- assign enable_zoom = section.settings.enable_zoom -%}
-  {%- assign compare_at_price = current_variant.compare_at_price -%}
-  {%- assign price = current_variant.price -%}
 
-  {% case section.settings.image_size %}
-  {% when 'small' %}
-  {%- assign product_image_width = 'medium-up--one-third' -%}
-  {%- assign product_description_width = 'medium-up--two-thirds' -%}
-  {%- assign product_thumbnail_width = 'medium-up--one-third' -%}
-  {%- assign height = 345 -%}
-  {% when 'medium' %}
-  {%- assign product_image_width = 'medium-up--one-half' -%}
-  {%- assign product_description_width = 'medium-up--one-half' -%}
-  {%- assign product_thumbnail_width = 'medium-up--one-quarter' -%}
-  {%- assign height = 600 -%}
-  {% when 'large' %}
-  {%- assign product_image_width = 'medium-up--two-thirds' -%}
-  {%- assign product_description_width = 'medium-up--one-third' -%}
-  {%- assign product_thumbnail_width = 'medium-up--one-fifth' -%}
-  {%- assign height = 720 -%}
-  {% when 'full' %}
-  {%- assign product_image_width = '' -%}
-  {%- assign product_description_width = '' -%}
-  {%- assign product_thumbnail_width = 'medium-up--one-eighth' -%}
-  {%- assign height = 1090 -%}
-  {%- assign enable_zoom = false -%}
-  {% endcase %}
+  <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--medium-image{% endif %}">
+    <div class="prouct-single__image_container medium-up--one-half">
+      <div class="grid__item product-single__photos">
+        {% for image in product.images %}
+          {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}
+          {% capture zoom_img_id %}FeaturedImageZoom-{{ section.id }}-{{ image.id }}{% endcapture %}
+          {% capture img_wrapper_id %}{{ zoom_img_id }}-wrapper{% endcapture %}
+          {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
 
-  <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--{{ section.settings.image_size }}-image{% endif %}">
-    <div class="grid__item product-single__photos {{ product_image_width }}{% if section.settings.image_size == 'full' %} product-single__photos--full{% endif %}">
-      {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
-      {% for image in product.images %}
-        {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}
-        {% capture img_class %}product-featured-img{% endcapture %}
-        {% capture zoom_img_id %}FeaturedImageZoom-{{ section.id }}-{{ image.id }}{% endcapture %}
-        {% capture img_wrapper_id %}{{ zoom_img_id }}-wrapper{% endcapture %}
-        {%- assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-
-      <div>
-        <div id="{{ img_wrapper_id }}" class="product-single__photo-wrapper js">
-          {% include 'image-style' with small_style: true, width: height, height: height, wrapper_id: img_wrapper_id, img_id: img_id %}
-
-          <div
-               id="{{ zoom_img_id }}"
-               style="padding-top:{{ 1 | divided_by: image.aspect_ratio | times: 100}}%;"
-               class="product-single__photo{% if enable_zoom %} js-zoom-enabled{% endif %}{% if product.images.size > 1 %} product-single__photo--has-thumbnails{% endif %}"
-               data-image-id="{{ image.id }}"
-               {% if enable_zoom %} data-zoom="{{ image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
-            <img id="{{ img_id }}"
-                 class="feature-row__image {{ img_class }} lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
-                 src="{{ image | img_url: '300x300' }}"
-                 data-src="{{ img_url }}"
-                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                 data-aspectratio="{{ image.aspect_ratio }}"
-                 data-sizes="auto"
-                 tabindex="-1"
-                 alt="{{ image.alt | escape }}">
+        <div>
+          <div id="{{ img_wrapper_id }}" class="product-single__photo-wrapper js">
+            <div
+                id="{{ zoom_img_id }}"
+                class="product-single__photo{% if enable_zoom %} js-zoom-enabled{% endif %}{% if product.images.size > 1 %} product-single__photo--has-thumbnails{% endif %}"
+                data-image-id="{{ image.id }}"
+                {% if enable_zoom %} data-zoom="{{ image | img_url: product_image_zoom_size, scale: product_image_scale }}"{% endif %}>
+              {%- if has_badge -%}
+              <div class="product-badge {{badge_type}}">
+                {{badge_text}}
+              </div>
+              {%- endif -%}
+              <img id="{{ img_id }}"
+                  class="feature-row__image product-featured-img lazyload{% unless featured_image == image %} lazypreload{% endunless %}"
+                  src="{{ image | img_url: '300x300' }}"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                  data-aspectratio="{{ image.aspect_ratio }}"
+                  data-sizes="auto"
+                  tabindex="-1"
+                  alt="{{ image.alt | escape }}">
+            </div>
           </div>
+          <noscript>
+            {% capture product_image_size %}{{ height }}x{% endcapture %}
+            <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;">
+          </noscript>
         </div>
-        <noscript>
-          {% capture product_image_size %}{{ height }}x{% endcapture %}
-          <img src="{{ featured_image | img_url: product_image_size, scale: product_image_scale }}" alt="{{ featured_image.alt }}" id="FeaturedImage-{{ section.id }}" class="product-featured-img" style="max-width: {{ height }}px;">
-        </noscript>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
 
-    <div class="grid__item {{ product_description_width }} form-product">
+    <div class="grid__item medium-up--one-half form-product">
       <div class="product-single__meta">
-
-        <h1 class="product-single__title">{{ product.title }}</h1>
-
+        <div class="product__vendor">{{product.vendor}}</div>
+        <h2 class="product-single__title">{{ product.title }}</h2>
         <div class="product__price">
           {% include 'product-price', variant: current_variant %}
         </div>
@@ -158,6 +167,12 @@
         {% endform %}
       </div>
 
+      <div class="product-single__review-container">
+        <a href="#reviews"></a>
+        <a id="reviews"></a>
+        <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+      </div>
+
       {%- comment -%}
       Live region for announcing updated price and availability to screen readers
       {%- endcomment -%}
@@ -169,10 +184,6 @@
       <div class="product-single__description rte">
         {{ product.description }}
       </div>
-      
-      <a href="#reviews"></a>
-      <a id="reviews"></a>
-      <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
 
       {% if section.settings.show_share_buttons %}
       {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
@@ -180,16 +191,6 @@
     </div>
   </div>
 </div>
-{% comment %}
-{% if collection %}
-<div class="text-center return-link-wrapper page-width">
-  <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
-    {% include 'icon-arrow-left' %}
-    {{ 'products.product.back_to_collection' | t: title: collection.title }}
-  </a>
-</div>
-{% endif %}
-{% endcomment %}
 
 {% unless product == empty %}
 <script type="application/json" id="ProductJson-{{ section.id }}">
@@ -201,173 +202,101 @@
 
 {% schema %}
 {
-"name": {
-"de": "Produktseiten",
-"en": "Product pages",
-"es": "Páginas de productos",
-"fr": "Pages de produits",
-"it": "Pagine di prodotto",
-"ja": "商品ページ",
-"pt-BR": "Páginas de produtos"
-},
-"settings": [
-{
-"type": "select",
-"id": "image_size",
-"label": {
-"de": "Foto-Größe",
-"en": "Image size",
-"es": "Tamaño de la imagen",
-"fr": "Taille des images",
-"it": "Dimensione immagine",
-"ja": "画像のサイズ",
-"pt-BR": "Tamanho da imagem"
-},
-"options": [
-{
-"value": "small",
-"label": {
-"de": "Klein",
-"en": "Small",
-"es": "Pequeña",
-"fr": "Petite",
-"it": "Piccolo",
-"ja": "小",
-"pt-BR": "Pequeno"
-}
-},
-{
-"value": "medium",
-"label": {
-"de": "Mittel",
-"en": "Medium",
-"es": "Mediana",
-"fr": "Moyenne",
-"it": "Medio",
-"ja": "中",
-"pt-BR": "Médio"
-}
-},
-{
-"value": "large",
-"label": {
-"de": "Groß",
-"en": "Large",
-"es": "Grande",
-"fr": "Grande",
-"it": "Grande",
-"ja": "大",
-"pt-BR": "Grande"
-}
-},
-{
-"value": "full",
-"label": {
-"de": "Volle Breite",
-"en": "Full-width",
-"es": "Ancho completo",
-"fr": "Pleine largeur",
-"it": "Intera larghezza",
-"ja": "全幅",
-"pt-BR": "Largura completa"
-}
-}
-],
-"default": "medium"
-},
-{
-"type": "checkbox",
-"id": "show_quantity_selector",
-"label": {
-"de": "Quantitäts-Auswahl anzeigen",
-"en": "Show quantity selector",
-"es": "Mostrar selector de cantidad",
-"fr": "Afficher le sélecteur de quantité",
-"it": "Mostra selettore quantità",
-"ja": "数量セレクターを表示する",
-"pt-BR": "Exibir seletor de quantidade"
-},
-"default": false
-},
-{
-"type": "checkbox",
-"id": "show_variant_labels",
-"label": {
-"de": "Varianten-Etiketten anzeigen",
-"en": "Show variant labels",
-"es": "Mostrar etiquetas de variantes",
-"fr": "Afficher le nom des variantes",
-"it": "Mostra etichette varianti",
-"ja": "バリエーションのラベルを表示する",
-"pt-BR": "Exibir etiquetas de variantes"
-},
-"default": true
-},
-{
-"type": "checkbox",
-"id": "show_vendor",
-"label": {
-"de": "Lieferanten anzeigen",
-"en": "Show vendor",
-"es": "Mostrar proveedor",
-"fr": "Afficher les vendeurs",
-"it": "Mostra fornitore",
-"ja": "販売元を表示する",
-"pt-BR": "Exibir fornecedor"
-},
-"default": false
-},
-{
-"type": "checkbox",
-"id": "enable_zoom",
-"label": {
-"de": "Foto-Zoom zulassen",
-"en": "Enable image zoom",
-"es": "Habilitar zoom de imagen",
-"fr": "Activer le zoom d'image",
-"it": "Abilita lo zoom dell'immagine",
-"ja": "画像ズームを有効にする",
-"pt-BR": "Ativar o zoom da imagem"
-},
-"default": true
-},
-{
-"type": "checkbox",
-"id": "enable_payment_button",
-"label": {
-"de": "Dynamischen Checkout Button anzeigen",
-"en": "Show dynamic checkout button",
-"es": "Mostrar botón de pago dinámico",
-"fr": "Afficher le bouton de passage à la caisse dynamique",
-"it": "Mostra pulsante di check-out dinamico",
-"ja": "動的チェックアウトボタンを表示する",
-"pt-BR": "Exibir botão dinâmico de finalização da compra"
-},
-"info": {
-"de": "Lässt Kunden direkt bezahlen mit bekannten Bezahlmethoden. [Mehr erfahren](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
-"en": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
-"es": "Permite a los clientes pagar directamente usando un método de pago familiar. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
-"fr": "Permettez à vos clients de passer à la caisse avec un moyen de paiement qui leur est familier. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
-"it": "Fai in modo che i clienti effettuino il check-out direttamente utilizzando un metodo di pagamento a loro conosciuto. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
-"ja": "使い慣れた決済方法を使用して、お客様に直接チェックアウトしてもらいましょう。[もっと詳しく](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
-"pt-BR": "Permite que os clientes finalizem os pedidos na hora usando uma forma de pagamento salva. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
-},
-"default": false
-},
-{
-"type": "checkbox",
-"id": "show_share_buttons",
-"label": {
-"de": "Buttons für Social Media anzeigen",
-"en": "Show social sharing buttons",
-"es": "Mostrar botones para compartir en redes sociales",
-"fr": "Affichez les boutons de partage sur les médias sociaux",
-"it": "Mostra i pulsanti per la condivisione sui social",
-"ja": "ソーシャル共有ボタンを表示する",
-"pt-BR": "Exibir botões de compartilhamento em redes sociais"
-},
-"default": true
-}
-]
+  "name": "Product pages",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": {
+        "de": "Quantitäts-Auswahl anzeigen",
+        "en": "Show quantity selector",
+        "es": "Mostrar selector de cantidad",
+        "fr": "Afficher le sélecteur de quantité",
+        "it": "Mostra selettore quantità",
+        "ja": "数量セレクターを表示する",
+        "pt-BR": "Exibir seletor de quantidade"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_labels",
+      "label": {
+        "de": "Varianten-Etiketten anzeigen",
+        "en": "Show variant labels",
+        "es": "Mostrar etiquetas de variantes",
+        "fr": "Afficher le nom des variantes",
+        "it": "Mostra etichette varianti",
+        "ja": "バリエーションのラベルを表示する",
+        "pt-BR": "Exibir etiquetas de variantes"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": {
+        "de": "Lieferanten anzeigen",
+        "en": "Show vendor",
+        "es": "Mostrar proveedor",
+        "fr": "Afficher les vendeurs",
+        "it": "Mostra fornitore",
+        "ja": "販売元を表示する",
+        "pt-BR": "Exibir fornecedor"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_zoom",
+      "label": {
+        "de": "Foto-Zoom zulassen",
+        "en": "Enable image zoom",
+        "es": "Habilitar zoom de imagen",
+        "fr": "Activer le zoom d'image",
+        "it": "Abilita lo zoom dell'immagine",
+        "ja": "画像ズームを有効にする",
+        "pt-BR": "Ativar o zoom da imagem"
+      },
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": {
+        "de": "Dynamischen Checkout Button anzeigen",
+        "en": "Show dynamic checkout button",
+        "es": "Mostrar botón de pago dinámico",
+        "fr": "Afficher le bouton de passage à la caisse dynamique",
+        "it": "Mostra pulsante di check-out dinamico",
+        "ja": "動的チェックアウトボタンを表示する",
+        "pt-BR": "Exibir botão dinâmico de finalização da compra"
+      },
+      "info": {
+        "de": "Lässt Kunden direkt bezahlen mit bekannten Bezahlmethoden. [Mehr erfahren](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "en": "Lets customers check out directly using a familiar payment method. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "es": "Permite a los clientes pagar directamente usando un método de pago familiar. [Más información](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "fr": "Permettez à vos clients de passer à la caisse avec un moyen de paiement qui leur est familier. [En savoir plus](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "it": "Fai in modo che i clienti effettuino il check-out direttamente utilizzando un metodo di pagamento a loro conosciuto. [Maggiori informazioni](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "ja": "使い慣れた決済方法を使用して、お客様に直接チェックアウトしてもらいましょう。[もっと詳しく](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+        "pt-BR": "Permite que os clientes finalizem os pedidos na hora usando uma forma de pagamento salva. [Saiba mais](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+      },
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_share_buttons",
+      "label": {
+        "de": "Buttons für Social Media anzeigen",
+        "en": "Show social sharing buttons",
+        "es": "Mostrar botones para compartir en redes sociales",
+        "fr": "Affichez les boutons de partage sur les médias sociaux",
+        "it": "Mostra i pulsanti per la condivisione sui social",
+        "ja": "ソーシャル共有ボタンを表示する",
+        "pt-BR": "Exibir botões de compartilhamento em redes sociais"
+      },
+      "default": true
+    }
+  ]
 }
 {% endschema %}

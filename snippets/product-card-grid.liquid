@@ -1,7 +1,41 @@
+{%- assign has_badge = false -%}
+
+{%- if product.tags contains 'new' -%}
+  {%- assign has_badge = true -%}
+  {%- assign badge_type = 'new' -%}
+  {%- assign badge_text = "NEW" -%}
+{%- endif -%}
+
+{%- for tag in product.tags -%}
+  {%- assign tag_parts = tag | split: ':' -%}
+  {%- if tag_parts[0] == 'limited' -%}
+    {%- assign has_badge = true -%}
+    {%- assign badge_type = 'limited' -%}
+    
+    {%- if tag_parts[1] != blank -%}
+      {%- capture badge_text -%}
+        LIMITED EDITION OF {{tag_parts[1] | strip }}
+      {%- endcapture -%}
+    {%- else -%}
+      {%- assign badge_text = "LIMITED EDITION" -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if product.tags contains 'soldout' -%}
+  {%- assign has_badge = true -%}
+  {%- assign badge_type = 'soldout' -%}
+  {%- assign badge_text = "SOLD OUT" -%}
+{%- endif -%}
 
 <a class="grid-view-item__link grid-view-item__image-container" href="{{ product.url | within: collection }}">
   <div class="grid-view-item">
     <span class="visually-hidden">{{ product.title }}</span>
+    {%- if has_badge -%}
+    <div class="product-badge {{badge_type}}">
+      {{badge_text}}
+    </div>
+    {%- endif -%}
     <div class="grid-view-item__image-wrapper product-card__image-wrapper js">
       <img class="grid-view-item__image lazyload product-card__image"
         src="{{ product.featured_image | img_url: '300x300' }}"

@@ -1,12 +1,13 @@
 {% comment %}
 The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
-{% section 'free-shipping' %}
-<div class="page-width section-related-products">
-  {% include 'breadcrumbs' %}
+<div class="product-page-container">
+  <div class="page-width">
+    {% include 'breadcrumbs' %}
+  </div>
+  {% section 'product-template' %}
+  {% section 'related-products' %}
 </div>
-{% section 'product-template' %}
-{% section 'related-products' %}
 
 <script>
   // Override default values of shop.strings for each template.
