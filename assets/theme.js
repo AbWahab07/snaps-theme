@@ -3505,6 +3505,7 @@ $(theme.init);
     }else{
       $('.product-single__photos').slick({
         arrows: false, 
+        dots: true,
         infinite: true,
         speed: 300,
         fade: true,

@@ -1518,6 +1518,10 @@ li {
     font-size: em(14, $font-size-base);
     color: $SECONDARDYTEXT;
   }
+
+  @include media-query($small) {
+    display: none;
+  }
 }
 
 .fine-print {
@@ -3227,10 +3231,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   // prevent scroll anchoring within element
   overflow-anchor: none;
   margin-bottom: $gutter-site;
-  @include media-query($small) {
-    margin-bottom: $gutter-site-mobile;
-
-  }
+  
   .slick-prev {
     left: 40px;
   }
@@ -3537,9 +3538,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 @include media-query($small) {
-  .template-product .main-content {
-    padding-top: $grid-gutter-mobile;
-  }
   .thumbnails-slider--active {
     .product-single__thumbnails {
       display: none;
@@ -3625,8 +3623,12 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   }
 }
 
+.collection-list-container {
+  padding-top: 40px;
+}
+
 .collection-grid-container { 
-  padding-top: $grid-gutter * 2;
+  padding-top: 40px;
 
   &.has-image {
     padding-top: $grid-gutter;
@@ -6575,24 +6577,12 @@ $toolbar-height-small: 46px;
 }
 
 .collection-grid-item__title {
-  color: $color-overlay-title-text;
+  color: $SNAPPEDBLACK;
   position: absolute;
-  text-align: center;
   width: 100%;
-  top: 50%;
-  padding: 0 5px;
-  @include transform(translateY(-50%));
-  transition: $transition-link-hover;
-  text-shadow: 0 0 4px $color-text-shadow;
-  hyphens: auto;
-
-  @if $font-bold-titles {
-    font-weight: $font-weight-header--bold;
-  }
-
-  @include media-query($medium-up) {
-    padding: 0 15px;
-  }
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 10px 15px;
 }
 
 .collection-grid-item__link {
@@ -6621,7 +6611,7 @@ $toolbar-height-small: 46px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
 
 }
 
@@ -7175,6 +7165,10 @@ body.template-product {
 
   .product-page-container {
     padding-top: 40px;
+
+    @include media-query($small) {
+      padding-top: 0px;
+    }
   }
 
   .product-template__container {
