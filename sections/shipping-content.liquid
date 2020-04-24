@@ -1,0 +1,58 @@
+{%- for block in section.blocks -%}
+  {%- if block.type == 'header' -%}
+  <div class="faq-section-header">
+    {{block.settings.title}}
+  </div>
+  {%- endif -%}
+  {%- if block.type == 'qa-block' -%}
+  <div class="faq-question-container expandable expandable-hide ">
+    <div class="faq-question expandable-action">
+      {{block.settings.title}}
+    </div>
+    <div class="rte faq-answer expandable-content">
+      {{block.settings.answer}}
+    </div>
+  </div>
+  {%- endif -%}
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": "Shipping Content",
+  "blocks": [
+    {
+      "type": "header",
+      "name": "Section Header",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Header Text"
+        }
+      ]
+    },
+    {
+      "type": "qa-block",
+      "name": "Asked Question",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Question"
+        },
+        {
+          "id": "answer",
+          "type": "richtext",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Collection",
+      "name": "Collection Showcase"
+    }
+  ]
+}
+{% endschema %}

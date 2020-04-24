@@ -3639,6 +3639,14 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   margin-bottom: $section-spacing-small / 2;
 }
 
+.blog-list-view {
+  padding-top: 40px;
+
+  @include media-query($small) {
+    padding-top: 0;
+  }
+}
+
 .blog-list-view .pagination {
   padding-top: 0;
 }
@@ -4218,8 +4226,9 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .article-listing {
-  padding-top: $gutter-site;
-  margin-bottom: $gutter-site;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $SNAPPEDBLACK;
+  margin-bottom: 40px;
 }
 
 .article__title {
@@ -4232,18 +4241,39 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   }
 }
 
-.article__author {
-  margin-right: 10px;
-}
+.article__metainfo {
+  @include display-flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include justify-content(flex-start);
 
-.article__author,
-.article__date {
-  display: inline-block;
-  margin-bottom: $gutter-site-mobile;
+  .article__author_image {
+    border-radius: 35px;
+  }
+
+  .article__metadata {
+    @include display-flexbox();
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+
+    margin-left: 20px;
+  }
+
+  .article__author {
+    margin-bottom: 5px;
+  }
+
+  .article__author,
+  .article__date {
+    display: inline-block;
+    font-size: em(14, $font-size-base);
+    color: $SECONDARDYTEXT;
 
   .template-article & {
     margin-bottom: 0;
   }
+}
 }
 
 .article__tags {
@@ -4286,6 +4316,38 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     border-color: transparent;
     border-bottom-color: currentColor;
   }
+}
+
+.article__header-container {
+  @include display-flexbox;
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+
+  @include media-query($medium-up) {
+    @include flex-direction(row);  
+    max-width: $width-site;
+    padding: 0 $gutter-site;
+    margin: 0 auto 40px;
+  }
+
+
+  .article__list-image-wrapper {
+    @include flex(2);
+    margin-bottom: 0;
+  }
+
+  .article__header {
+    @include flex(1);
+    padding: 40px 0 0 $grid-gutter;
+
+    @include media-query($small) {
+      padding: 20px $grid-gutter-mobile 0;
+    }
+  }
+}
+
+.article__content {
+  margin: 0 auto;
 }
 
 /*============================================================================
@@ -4363,7 +4425,9 @@ Blog article grid
 
 .article__list-image-wrapper{
   width: 100%;
+  height: 420px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .article__list-image-container {
@@ -4372,20 +4436,13 @@ Blog article grid
   position: relative;
 
   min-height: 1px;
-  width: 100%;
-  height: 100%;
-}
-
-.article__list-image-wrapper{
-  width: 100%;
-  margin-bottom: 20px;
 }
 
 .article__list-image {
   margin: 0 auto;
   width: 100%;
-  position: absolute;
-  top: 0;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sidebar {
@@ -7225,6 +7282,80 @@ body.template-product {
       input{
         background-color: transparent; 
       }
+    }
+  }
+}
+
+// PAGE TEMPLATES THAT ARENT DEFINED FOR SOME REASON
+.contact-page-container {
+  padding-top: 40px;
+}
+
+.faq-page-container {
+  padding-top: 40px;
+
+  .faq-section-header {
+    @extend .h6;
+    margin-top: 40px;
+  }
+
+  .faq-question-container {
+    border-bottom: 1px solid $SNAPPEDBLACK;
+
+    .faq-question {
+      @extend .h4;
+      margin: 14px 0 10px;
+    } 
+
+    .faq-answer {
+      font-size: em(14, $font-size-base);
+      padding-bottom: 20px;
+      
+      p {
+        color: $SECONDARDYTEXT;
+      }
+    }
+  }
+}
+
+//Expandable
+.expandable {
+  .expandable-action {
+    @include display-flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    &:after {
+      content: "";
+      margin-right: 10px;
+      width: 22px;
+      height: 14px;
+      background: url('expand-arrow.png') no-repeat center;
+
+      @include media-query($small) {
+        width: 42px;
+      }
+    }
+  }
+
+  &.expandable-hide {
+    .expandable-action:after {
+      @include transform(scaleY(-1)); 
+    }
+
+    .expandable-content {
+      display: none;
+    }
+  }
+
+  &.expandable-show {
+    .expandable-action:after {
+      @include transform(scaleY(1)); 
+    }
+
+    .expandable-content {
+      display: block;
     }
   }
 }

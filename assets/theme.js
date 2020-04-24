@@ -3545,5 +3545,11 @@ $(theme.init);
       });
 
     }
+
+    //Expandable Items
+    $('.expandable-action').click(function() { 
+      expandable = $(this).parent();
+      expandable.toggleClass("expandable-hide").toggleClass('expandable-show');
+    });
   });
 }(jQuery));

@@ -1,18 +1,48 @@
-<div class="section-header text-center">
-  <h1 class="article__title">{{ article.title }}</h1>
-  {% if section.settings.blog_show_author %}
-    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
-  {% endif %}
 
-  {% if section.settings.blog_show_date %}
-    <span class="article__date">
-      {{ article.published_at | time_tag: format: 'month_day_year' }}
-    </span>
+<div class="section-header article__header-container">
+  {% if article.image %}
+    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+    <div id="{{ img_wrapper_id }}" class="article__list-image-wrapper js">
+      <a href="{{ article.url }}" class="article__list-image-container">
+        <img id="{{ img_id }}"
+              class="article__list-image lazyload"
+              src="{{ article.image | img_url: '720x' }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 905, 1090, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ article.image.aspect_ratio }}"
+              data-sizes="auto"
+              alt="">
+      </a>
+    </div>
+    <noscript>
+      <p>
+        <a href="{{ article.url }}">
+          {{ article | img_url: '455x300', scale: 2 | img_tag: article.title }}
+        </a>
+      </p>
+    </noscript>
   {% endif %}
+  <div class="article__header">
+    <h3 class="article__title">{{ article.title }}</h3>
+    <div class="article__metainfo">
+      <img class="article__author_image" src="{{ article.user.image | img_url: '70x70' }}" />
+      <div class="article__metadata">
+        <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+        <span class="article__date">
+          {{ article.published_at | time_tag: format: 'month_day_year' }}
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="rte">
-  {{ article.content }}
+<div class="page-width">
+  <div class="rte medium-up--two-thirds article__content">
+    {{ article.content }}
+  </div>
 </div>
 
 {% if section.settings.show_share_buttons %}

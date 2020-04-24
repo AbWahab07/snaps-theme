@@ -1,9 +1,9 @@
-<div class="page-width">
+<div class="contact-page-container page-width">
   <div class="grid">
-    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
-      <div class="section-header text-center">
-        <h1>{{ page.title }}</h1>
-      </div>
+    <div class="grid__item medium-up--two-thirds medium-up--push-one-sixth">
+      <header class="section-header">
+        <h2>{{ page.title }}</h2>
+      </header>
 
       {% if page.content.size > 0 %}
         <div class="rte">
@@ -41,11 +41,8 @@
             </div>
           </div>
 
-          <label for="{{ formId }}-phone">{{ 'contact.form.phone' | t }}</label>
-          <input type="tel" id="{{ formId }}-phone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-
           <label for="{{ formId }}-message">{{ 'contact.form.message' | t }}</label>
-          <textarea rows="10" id="{{ formId }}-message" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+          <textarea rows="6" id="{{ formId }}-message" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
 
           <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
 
