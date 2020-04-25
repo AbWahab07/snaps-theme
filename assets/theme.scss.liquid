@@ -2850,7 +2850,7 @@ Animation Classes and Keyframes
 }
 
 .list-view-item {
-  margin-bottom: $gutter-site-mobile;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 0;
@@ -2858,7 +2858,7 @@ Animation Classes and Keyframes
 
   @include media-query($medium-up) {
     border-bottom: 1px solid $color-border;
-    padding-bottom: $gutter-site-mobile;
+    padding-bottom: 20px;
 
     &:last-child {
       padding-bottom: 0;
@@ -2874,7 +2874,9 @@ Animation Classes and Keyframes
 }
 
 .list-view-item__image {
-  max-height: 95px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .list-view-item__image-column {
@@ -2888,8 +2890,8 @@ Animation Classes and Keyframes
 }
 
 .list-view-item__image-wrapper {
-  position: relative;
-  margin-right: $section-spacing-small;
+  width: 100px;
+  height: 100px;
 
   @include media-query($small) {
     margin-right: $section-spacing-small / 2;
@@ -2913,10 +2915,16 @@ Animation Classes and Keyframes
   @include media-query($small) {
     font-size: em($font-size-base - 1px);
   }
+
+  .product-card__title {
+    margin-bottom: 0;
+  }
 }
 
 .list-view-item__sold-out {
-  font-size: em($font-size-base - 1px);
+  @extend .h6;
+  margin-bottom: 0;
+  color: $FIREBRICK;
 }
 
 .list-view-item__on-sale {
@@ -4605,7 +4613,7 @@ Blog article grid
 .search-bar__input {
   background-color: transparent;
   border-radius: $border-radius;
-  color: $color-text;
+  color: $SNAPPEDWHITE;
   border-color: transparent;
   padding-right: calc(35em / 10);
   width: 100%;
@@ -6830,6 +6838,12 @@ $toolbar-height-small: 46px;
       display: block;
     }
   }
+
+  &.product-card--list {
+    .price {
+      margin-top: 0;
+    }
+  }
 }
 
 .product-card__title {
@@ -7342,7 +7356,17 @@ body.template-product {
 
 .four-oh-four-page-container {
   padding-top: 40px;
-  
+}
+
+.search-page-container {
+  padding-top: 40px;
+
+  .section-header {
+    .search {
+      margin: 0 auto;
+      max-width: 50%;
+    }
+  }
 }
 
 //Expandable

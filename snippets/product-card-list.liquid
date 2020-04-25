@@ -12,7 +12,7 @@
 
     <div class="list-view-item__title-column">
       <div class="list-view-item__title" aria-hidden="true">
-        <span class="product-card__title">{{ product.title }}</span>
+        <h6 class="product-card__title">{{ product.title }}</h6>
       </div>
       {% if product.compare_at_price > product.price %}
         <div class="list-view-item__on-sale">{{ 'products.product.on_sale' | t }}</div>
@@ -31,4 +31,4 @@
       {% endif %}
     </div>
   </div>
-{% include 'preorder-now-collection-item' %}</div>
+</div>
