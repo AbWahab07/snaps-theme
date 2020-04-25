@@ -2885,17 +2885,13 @@ Animation Classes and Keyframes
   width: 130px;
 
   @include media-query($small) {
-    width: 85px;
+    width: 110px;
   }
 }
 
 .list-view-item__image-wrapper {
   width: 100px;
   height: 100px;
-
-  @include media-query($small) {
-    margin-right: $section-spacing-small / 2;
-  }
 }
 
 .list-view-item__title-column {
@@ -7366,6 +7362,10 @@ body.template-product {
     .search {
       margin: 0 auto;
       max-width: 50%;
+
+      @include media-query($small) {
+        max-width: 100%;
+      }
     }
   }
 }
