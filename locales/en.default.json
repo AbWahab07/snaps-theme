@@ -54,7 +54,7 @@
         "other": "{{ count }} results for \"{{ terms }}\""
       },
       "title": "Search our site",
-      "placeholder": "Search",
+      "placeholder": "Find you flex",
       "submit": "Submit",
       "close": "Close search",
       "heading": {
