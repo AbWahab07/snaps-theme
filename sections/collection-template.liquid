@@ -17,9 +17,9 @@
   </header>
 {%- endif -%}
   <div class="page-width" id="Collection">
-    <div class="collection-grid-container grid{% if collection.products_count > 0 %} grid--view-items{% endif %}{% if collection.image %} has-image{% endif %}">
+    <div class="collection-grid-container grid--uniform grid{% if collection.products_count > 0 %} grid--view-items{% endif %}{% if collection.image %} has-image{% endif %}">
       {%- for product in collection.products -%}
-        <div class="grid__item product grid__item--{{section.id}}">
+        <div class="grid__item product grid__item--{{section.id}} small--one-half medium-up--one-quarter">
           {% include 'product-card-grid' %}
         </div>
       {% endfor %}
