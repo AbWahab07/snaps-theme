@@ -3636,6 +3636,9 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 
 .collection-grid-container { 
   padding-top: 40px;
+  @include display-flexbox();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
 
   &.has-image {
     padding-top: $grid-gutter;
