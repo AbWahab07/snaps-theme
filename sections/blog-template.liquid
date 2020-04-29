@@ -128,9 +128,7 @@
                   {% endif %}
                 </div>
                 <div class="article__metainfo">
-                  <img class="article__author_image" src="{{ article.user.image | img_url: '70x70' }}" />
                   <div class="article__metadata">
-                    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
                     <span class="article__date">
                       {{ article.published_at | time_tag: format: 'month_day_year' }}
                     </span>
