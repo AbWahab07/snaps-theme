@@ -27,11 +27,11 @@ Setup some display values based on settings.
           <img src="{{ section.settings.image_content | img_url: imageContentWidth }}" />
         {% else %}
           {% if section.settings.title != blank %}
-          <h1 >{{ section.settings.title | escape }}</h1>
+          <h1 style="color: {{ section.settings.color_hero_text }}">{{ section.settings.title | escape }}</h1>
           {% endif %}
         {% endif %}
         {% if section.settings.text != blank %}
-          <div class="hero__subtext rte-setting">{{ section.settings.text }}</div>
+          <div class="hero__subtext rte-setting" style="color: {{ section.settings.color_hero_text }}">{{ section.settings.text }}</div>
           {% endif %}
         {% if section.settings.button_label != blank and section.settings.button_link != blank %}
           <a href="{{ section.settings.button_link }}" class="btn hero__btn h6" style="background-color: {{ section.settings.color_hero_button }}; color: {{ section.settings.color_hero_button_text }}">
@@ -185,6 +185,11 @@ Setup some display values based on settings.
       "type": "text",
       "id": "text",
       "label": "Sub Text"
+    },
+    {
+      "type": "color",
+      "id": "color_hero_text",
+      "label": "Text Color"
     },
     {
       "type": "text",
