@@ -22,6 +22,12 @@
   {%- endif -%}
 {%- endfor -%}
 
+{%- if product.tags contains 'backorder' -%}
+  {%- assign has_badge = true -%}
+  {%- assign badge_type = 'soldout' -%}
+  {%- assign badge_text = "BACKORDERED" -%}
+{%- endif -%}
+
 {%- if product.tags contains 'soldout' -%}
   {%- assign has_badge = true -%}
   {%- assign badge_type = 'soldout' -%}

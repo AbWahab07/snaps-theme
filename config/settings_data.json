@@ -54,9 +54,9 @@
           "logo_white": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-250px.png",
           "logo_max_width": 125,
           "main_linklist": "v2-header-navigation",
-          "message": false,
+          "message": true,
           "home_page_only": false,
-          "message_text": "",
+          "message_text": "Enter code MEMORIAL2020 for free shipping to the US & Canada all weekend long",
           "message_link": "",
           "color_bg": "#2229bd",
           "color_text": "#ffffff"
@@ -223,7 +223,7 @@
         "type": "rich-text",
         "settings": {
           "title": "Snapback Accessories With Style",
-          "text": "<p>Snaps are a vehicle for self-expression. They slide over the strap on your snap-back hat and add some flavor to your head game. Whatever you love, we want to help you express it with a subtle flex. And, if you don&rsquo;t love your new Snap, we&rsquo;ll send your money back.<\/p>"
+          "text": "<p>Snaps are for those of us who want to get a bit extra sometimes. They slide over the strap on your snapback hat and add extra flavor to your look. Be on point from 360 degrees whether repping your NBA favorites or amping your personal style. If you don&rsquo;t love your new Snap, we&rsquo;ll send your money back.<\/p>"
         }
       },
       "list-collections-template": {
@@ -300,13 +300,11 @@
           "1586537132497",
           "1586537135234"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "free-shipping": {
         "type": "free-shipping",
-        "settings": {
-        }
+        "settings": {}
       },
       "faq-content": {
         "type": "faq-content",
@@ -414,8 +412,7 @@
           "1587698602627",
           "1587698641729"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "shipping-content": {
         "type": "shipping-content",
@@ -455,8 +452,7 @@
           "1587704997471",
           "1587705019556"
         ],
-        "settings": {
-        }
+        "settings": {}
       }
     },
     "content_for_index": [
@@ -495,8 +491,7 @@
       "sections": {
         "header": {
           "type": "header",
-          "settings": {
-          }
+          "settings": {}
         },
         "hero": {
           "type": "hero",
@@ -509,21 +504,18 @@
           "blocks": {
             "slideshow-0": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "slideshow-1": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
             "slideshow-0",
             "slideshow-1"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "featured-collections": {
           "type": "collection",
@@ -533,31 +525,26 @@
         },
         "feature-row": {
           "type": "feature-row",
-          "settings": {
-          }
+          "settings": {}
         },
         "footer": {
           "type": "footer",
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "link_list-1": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -566,8 +553,7 @@
             "text",
             "newsletter"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "content_for_index": [
@@ -700,23 +686,20 @@
         },
         "1492033809691": {
           "type": "map",
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033877875": {
           "type": "quotes",
           "blocks": {
             "1492033877875-0": {
               "type": "quote",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
             "1492033877875-0"
           ],
-          "settings": {
-          }
+          "settings": {}
         },
         "1492033924902": {
           "type": "custom-content",
@@ -742,18 +725,15 @@
           "blocks": {
             "1492096252560-0": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-1": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             },
             "1492096252560-2": {
               "type": "featured_collection",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -792,23 +772,19 @@
           "blocks": {
             "link_list": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "link_list-1": {
               "type": "link_list",
-              "settings": {
-              }
+              "settings": {}
             },
             "text": {
               "type": "text",
-              "settings": {
-              }
+              "settings": {}
             },
             "newsletter": {
               "type": "newsletter",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -817,8 +793,7 @@
             "text",
             "newsletter"
           ],
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "content_for_index": [

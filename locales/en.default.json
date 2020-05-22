@@ -364,5 +364,12 @@
     "month_day_year": "%B %d, %Y"
   },
   "copyright_statement": "All rights reserved. Copyright © 2020 Snaps Ventures Inc.",
-  "patent_statement": "International Design & Utility Patents by Snaps Ventures Inc."
+  "patent_statement": "International Design & Utility Patents by Snaps Ventures Inc.",
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "shipping_method_notice": "Due to COVID-19, USPS, DHL and other carriers are practicing social distancing protocols in their warehouses to keep their employees safe.  As with everything now, health and safety are the highest priorities and this may cause a delivery delay on your order. We want to make sure you get your Snaps as soon as possible and are doing everything we can to ensure that. We apologize for this inconvenience during this challenging time and very much appreciate your patience."
+      }
+    }
+  }
 }
