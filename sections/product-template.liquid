@@ -1,5 +1,11 @@
 {%- assign has_badge = false -%}
 
+{%- if product.tags contains 'preorder' -%}
+  {%- assign has_badge = true -%}
+  {%- assign badge_type = 'limited' -%}
+  {%- assign badge_text = "PRE-ORDER" -%}
+{%- endif -%}
+
 {%- if product.tags contains 'new' -%}
   {%- assign has_badge = true -%}
   {%- assign badge_type = 'new' -%}

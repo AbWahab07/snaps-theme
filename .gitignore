@@ -12,7 +12,7 @@ dist
 upload
 deploy.log
 config.yml
-src/config/settings_data.json
+config/settings_data.json
 
 # Compiled source #
 ###################

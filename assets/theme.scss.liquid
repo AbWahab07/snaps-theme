@@ -6066,7 +6066,8 @@ $toolbar-height-small: 46px;
   }
 
   .hero--large {
-    height: 650px;
+    //height: 650px;
+    background-color: $SNAPPEDBLACK;
   }
 
   .hero--x-large {
@@ -7366,6 +7367,38 @@ body.template-product {
         max-width: 100%;
       }
     }
+  }
+}
+
+.greaterthan-page-container {
+  .hero-container {
+    margin-top: 0;
+    padding-bottom: 0;
+
+    .hero__content {
+      width: 80%;
+
+      @include media-query($small) {
+        h1 {
+          display: none;
+        }
+      }
+
+      .hero__subtext {
+        margin: 0
+      }
+    }
+
+    .rte-setting {
+      line-height: 1.25em;
+    }
+  }
+  .page-content-container {
+    padding-bottom: $section-spacing;
+  }
+
+  .featured-product {
+    margin-top: $section-spacing;
   }
 }
 
