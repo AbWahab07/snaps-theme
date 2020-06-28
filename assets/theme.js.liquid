@@ -3490,8 +3490,9 @@ $(theme.init);
 (function($){
   $(document).ready(function(){
 
-
     if($(window).width() > 750){
+      $('.hero video')[0].src = "{{ 'snaps-explainer.mp4' | asset_url }}"
+
       $('.product-single__photos').slick({
         arrows: true,
         dots: true,
@@ -3503,6 +3504,9 @@ $(theme.init);
         autoplay: false,
       });
     }else{
+
+      $('.hero video')[0].src = "{{ 'snaps-explainer-mobile.mp4' | asset_url }}"
+
       $('.product-single__photos').slick({
         arrows: false, 
         dots: true,

@@ -13,6 +13,7 @@ upload
 deploy.log
 config.yml
 config/settings_data.json
+config/settings_schema.json
 
 # Compiled source #
 ###################
