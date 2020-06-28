@@ -56,7 +56,7 @@
           "main_linklist": "v2-header-navigationgtr",
           "message": false,
           "home_page_only": false,
-          "message_text": "We're celebrating Father's Day all weekend long. Enter code FATHERSDAY10 at check out for 10% off your purchase.",
+          "message_text": "",
           "message_link": "",
           "color_bg": "#2229bd",
           "color_text": "#ffffff"
@@ -454,11 +454,69 @@
         ],
         "settings": {}
       },
+      "1592334329306": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "crisp-bulls",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_zoom": true,
+          "enable_payment_button": false,
+          "show_share_buttons": true
+        }
+      },
+      "1592401106115": {
+        "type": "slideshow",
+        "blocks": {
+          "1592401106115-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Court-2.jpg",
+              "alignment": "center",
+              "title": "Purpose",
+              "subheading": "The purpose of > The Greater Than Initiative> is to raise awareness of critical mental and emotional health issues affecting our society.  The purpose is to raise awareness of grassroots and established organizations doing good work without a lot of resources. The purpose is to raise money for these organizations. The purpose is to raise us all up.   We will need to stand up for one another, and we will need to do this together. Because together we are greater than we can ever be on our own.  Together we are >",
+              "link": ""
+            }
+          },
+          "1592401106115-1": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "top",
+              "title": "Image slide",
+              "subheading": "Tell your brand's story through video and images",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592401106115-0",
+          "1592401106115-1"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 5,
+          "slideshow_height": "small",
+          "text_size": "medium"
+        }
+      },
+      "1592401744451": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Court-2.jpg",
+          "layout": "left",
+          "title": "PURPOSE",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "dsds",
+          "button_link": "shopify:\/\/pages\/contact"
+        }
+      },
       "greaterthan-hero": {
         "type": "greaterthan-hero",
         "settings": {
           "image": "shopify:\/\/shop_images\/Court-2.jpg",
-          "alignment": "center",
+          "alignment": "top",
           "hero_size": "medium",
           "content_horizontal_position": "center",
           "content_vertical_position": "middle",
@@ -475,9 +533,9 @@
         }
       },
       "image-bar": {
-        "type": "image-bar",
+        "type": "image-bar",  
         "blocks": {
-          "1592517603589": {
+          "1592488067043": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-01.jpg",
@@ -486,7 +544,7 @@
               "cta_label": ""
             }
           },
-          "1592517616051": {
+          "1592488114208": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-05.jpg",
@@ -495,7 +553,7 @@
               "cta_label": ""
             }
           },
-          "1592517628655": {
+          "1592488135377": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-00_4af64d0c-60e0-4a27-8c87-7c6a8ddaf04f.jpg",
@@ -506,9 +564,9 @@
           }
         },
         "block_order": [
-          "1592517603589",
-          "1592517616051",
-          "1592517628655"
+          "1592488067043",
+          "1592488114208",
+          "1592488135377"
         ],
         "settings": {
           "section_height": "small"
@@ -533,7 +591,10 @@
       "1586537126557",
       "1581958059741",
       "1574862330024",
-      "1574862660510"
+      "1574862660510",
+      "1592401106115",
+      "1592334329306",
+      "1592401744451"
     ]
   },
   "presets": {

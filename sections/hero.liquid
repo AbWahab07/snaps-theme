@@ -12,13 +12,12 @@ Setup some display values based on settings.
 
 {% assign imageContentWidth = section.settings.image_width | append: "x" | strip %}
 
-<div class="hero hero--{{ section.settings.hero_size }} box ratio-container lazyload js"
-     {% if section.settings.image %}
-     data-bgset="{% include 'bgset', image: section.settings.image %}"
-     data-sizes="auto"
-     data-parent-fit="cover"
-     style="background-position: {{ section.settings.alignment }}; background-image: url('{{ section.settings.image | img_url: '800x' }});"
-     {% endif %}>
+<div class="hero hero--{{ section.settings.hero_size }} box ratio-container lazyload js">
+     <video autoplay loop muted>
+      <source src="{{ 'snaps-explainer.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'snaps-explainer-mobile.mp4' | asset_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   <div class="hero__inner">
     <div class="page-width">
       <div class="hero__content_container">
