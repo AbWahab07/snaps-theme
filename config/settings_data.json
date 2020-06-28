@@ -53,10 +53,10 @@
           "logo": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-125px-BLACK_4aaa91cd-8c8c-41b4-a033-afd4b8d9b256.png",
           "logo_white": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-250px.png",
           "logo_max_width": 125,
-          "main_linklist": "v2-header-navigation",
-          "message": true,
+          "main_linklist": "v2-header-navigationgtr",
+          "message": false,
           "home_page_only": false,
-          "message_text": "Enter code MEMORIAL2020 for free shipping to the US & Canada all weekend long",
+          "message_text": "We're celebrating Father's Day all weekend long. Enter code FATHERSDAY10 at check out for 10% off your purchase.",
           "message_link": "",
           "color_bg": "#2229bd",
           "color_text": "#ffffff"
@@ -232,7 +232,7 @@
           "1588004792290": {
             "type": "collection",
             "settings": {
-              "collection": "30-og"
+              "collection": ""
             }
           },
           "1588004801642": {
@@ -274,7 +274,7 @@
             "type": "collection",
             "settings": {
               "collection_image": "shopify:\/\/shop_images\/Site_Square-30OG.jpg",
-              "collection": "30-og",
+              "collection": "",
               "text": "SHOP NBA OG 30"
             }
           },
@@ -453,6 +453,78 @@
           "1587705019556"
         ],
         "settings": {}
+      },
+      "greaterthan-hero": {
+        "type": "greaterthan-hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Court-2.jpg",
+          "alignment": "center",
+          "hero_size": "medium",
+          "content_horizontal_position": "center",
+          "content_vertical_position": "middle",
+          "content_alignment": "center",
+          "image_content": "",
+          "image_width": "",
+          "title": "Purpose",
+          "text": "The purpose of > The Greater Than Initiative> is to raise awareness of critical mental and emotional health issues affecting our communities. The purpose is to raise awareness of organizations doing good work and to raise money for these organizations. The purpose is to raise us all up. Because together we are greater than we can ever be on our own.",
+          "color_hero_text": "#ffffff",
+          "button_label": "",
+          "button_link": "",
+          "color_hero_button": "",
+          "color_hero_button_text": ""
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "1592517603589": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-01.jpg",
+              "alignment": "top",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1592517616051": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-05.jpg",
+              "alignment": "top",
+              "link": "",
+              "cta_label": ""
+            }
+          },
+          "1592517628655": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-00_4af64d0c-60e0-4a27-8c87-7c6a8ddaf04f.jpg",
+              "alignment": "top",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "1592517603589",
+          "1592517616051",
+          "1592517628655"
+        ],
+        "settings": {
+          "section_height": "small"
+        }
+      },
+      "featured-product": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "fuck-racism",
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_zoom": true,
+          "enable_payment_button": false,
+          "show_share_buttons": true
+        }
       }
     },
     "content_for_index": [
@@ -495,9 +567,7 @@
         },
         "hero": {
           "type": "hero",
-          "settings": {
-            "text_size": "large"
-          }
+          "settings": {}
         },
         "slideshow": {
           "type": "slideshow",
@@ -537,21 +607,11 @@
             "link_list-1": {
               "type": "link_list",
               "settings": {}
-            },
-            "text": {
-              "type": "text",
-              "settings": {}
-            },
-            "newsletter": {
-              "type": "newsletter",
-              "settings": {}
             }
           },
           "block_order": [
             "link_list",
-            "link_list-1",
-            "text",
-            "newsletter"
+            "link_list-1"
           ],
           "settings": {}
         }
@@ -561,249 +621,6 @@
         "featured-collections",
         "feature-row",
         "slideshow"
-      ]
-    },
-    "Light": {
-      "color_text": "#162950",
-      "color_body_text": "#6d6d6d",
-      "color_sale_text": "#DA2F0C",
-      "color_borders": "#e4e4e4",
-      "color_button": "#DA2F0C",
-      "color_button_text": "#ffffff",
-      "color_small_button_text_border": "#162950",
-      "color_text_field": "#ffffff",
-      "color_text_field_text": "#162950",
-      "color_text_field_border": "#909090",
-      "color_image_overlay_text": "#ffffff",
-      "color_image_overlay": "#3d3d3d",
-      "image_overlay_opacity": 40,
-      "color_body_bg": "#f8f8f8",
-      "type_header_font": "muli_n6",
-      "type_header_base_size": 26,
-      "type_base_font": "muli_n4",
-      "type_base_size": 18,
-      "type_bold_product_titles": true,
-      "share_facebook": true,
-      "share_twitter": true,
-      "share_pinterest": true,
-      "social_twitter_link": "",
-      "social_facebook_link": "",
-      "social_pinterest_link": "",
-      "social_instagram_link": "",
-      "social_tumblr_link": "",
-      "social_snapchat_link": "",
-      "social_youtube_link": "",
-      "social_vimeo_link": "",
-      "favicon": "",
-      "checkout_header_image": "",
-      "checkout_logo_image": "",
-      "checkout_logo_position": "left",
-      "checkout_logo_size": "small",
-      "checkout_body_background_image": "",
-      "checkout_body_background_color": "#ffffff",
-      "checkout_input_background_color_mode": "white",
-      "checkout_sidebar_background_image": "",
-      "checkout_sidebar_background_color": "#e8f3f6",
-      "checkout_heading_font": "Roboto",
-      "checkout_body_font": "Source Sans Pro",
-      "checkout_accent_color": "#1990c6",
-      "checkout_button_color": "#23314e",
-      "checkout_error_color": "#ff6d6d",
-      "sections": {
-        "header": {
-          "type": "header",
-          "settings": {
-            "logo": "",
-            "logo_max_width": 135,
-            "main_linklist": "main-menu",
-            "message": true,
-            "color_bg": "#162950",
-            "color_text": "#ffffff"
-          }
-        },
-        "hero": {
-          "type": "hero",
-          "settings": {
-            "alignment": "center",
-            "hero_size": "x-large",
-            "text_size": "large"
-          }
-        },
-        "slideshow": {
-          "type": "slideshow",
-          "blocks": {
-            "slideshow-0": {
-              "type": "image",
-              "settings": {
-                "image": "",
-                "alignment": "center"
-              }
-            },
-            "1492095993817": {
-              "type": "image",
-              "settings": {
-                "image": "",
-                "alignment": "center"
-              }
-            }
-          },
-          "block_order": [
-            "slideshow-0",
-            "1492095993817"
-          ],
-          "settings": {
-            "autoplay": true,
-            "autoplay_speed": 6,
-            "slideshow_height": "medium",
-            "text_size": "medium"
-          }
-        },
-        "featured-collections": {
-          "type": "collection",
-          "settings": {
-            "grid": 3,
-            "rows": 1,
-            "show_vendor": true,
-            "show_view_all": true
-          }
-        },
-        "product-template": {
-          "type": "product-template",
-          "settings": {
-            "image_size": "medium",
-            "show_quantity_selector": false,
-            "show_variant_labels": true,
-            "show_vendor": false,
-            "enable_zoom": true,
-            "show_share_buttons": true
-          }
-        },
-        "collection-template": {
-          "type": "collection-template",
-          "settings": {
-            "show_vendor": false
-          }
-        },
-        "1492033809691": {
-          "type": "map",
-          "settings": {}
-        },
-        "1492033877875": {
-          "type": "quotes",
-          "blocks": {
-            "1492033877875-0": {
-              "type": "quote",
-              "settings": {}
-            }
-          },
-          "block_order": [
-            "1492033877875-0"
-          ],
-          "settings": {}
-        },
-        "1492033924902": {
-          "type": "custom-content",
-          "blocks": {
-            "1492033924902-0": {
-              "type": "text",
-              "settings": {
-                "width": "100%",
-                "alignment": "center",
-                "align_text": "center"
-              }
-            }
-          },
-          "block_order": [
-            "1492033924902-0"
-          ],
-          "settings": {
-            "title": ""
-          }
-        },
-        "1492096252560": {
-          "type": "collection-list",
-          "blocks": {
-            "1492096252560-0": {
-              "type": "featured_collection",
-              "settings": {}
-            },
-            "1492096252560-1": {
-              "type": "featured_collection",
-              "settings": {}
-            },
-            "1492096252560-2": {
-              "type": "featured_collection",
-              "settings": {}
-            }
-          },
-          "block_order": [
-            "1492096252560-0",
-            "1492096252560-1",
-            "1492096252560-2"
-          ],
-          "settings": {
-            "grid": 3
-          }
-        },
-        "blog-template": {
-          "type": "blog-template",
-          "settings": {
-            "layout": "grid",
-            "blog_show_author": true,
-            "blog_show_date": false
-          }
-        },
-        "article-template": {
-          "type": "article-template",
-          "settings": {
-            "blog_show_author": true,
-            "blog_show_date": true,
-            "show_share_buttons": true
-          }
-        },
-        "cart-template": {
-          "type": "cart-template",
-          "settings": {
-            "cart_notes_enable": false
-          }
-        },
-        "footer": {
-          "type": "footer",
-          "blocks": {
-            "link_list": {
-              "type": "link_list",
-              "settings": {}
-            },
-            "link_list-1": {
-              "type": "link_list",
-              "settings": {}
-            },
-            "text": {
-              "type": "text",
-              "settings": {}
-            },
-            "newsletter": {
-              "type": "newsletter",
-              "settings": {}
-            }
-          },
-          "block_order": [
-            "link_list",
-            "link_list-1",
-            "text",
-            "newsletter"
-          ],
-          "settings": {}
-        }
-      },
-      "content_for_index": [
-        "hero",
-        "featured-collections",
-        "slideshow",
-        "1492033924902",
-        "1492096252560",
-        "1492033877875",
-        "1492033809691"
       ]
     }
   }
