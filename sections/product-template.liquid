@@ -59,7 +59,7 @@
      >
 
   <div class="grid product-single{% if section.settings.enable_payment_button %} product-single--medium-image{% endif %}">
-    <div class="prouct-single__image_container medium-up--one-half">
+    <div class="product-single__image_container medium-up--one-half">
       <div class="grid__item product-single__photos">
         {% for image in product.images %}
           {% capture img_id %}FeaturedImage-{{ section.id }}-{{ image.id }}{% endcapture %}

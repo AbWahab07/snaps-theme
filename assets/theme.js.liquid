@@ -3489,10 +3489,17 @@ $(theme.init);
 
 (function($){
   $(document).ready(function(){
+    var heroVideo = $('.hero video')
+
+    if(heroVideo.length > 0) {
+      if($(window).width() > 750){
+        heroVideo[0].src = "{{ 'snaps-explainer.mp4' | asset_url }}"
+      } else {
+        heroVideo[0].src = "{{ 'snaps-explainer-mobile.mp4' | asset_url }}"
+      }
+    }
 
     if($(window).width() > 750){
-      $('.hero video')[0].src = "{{ 'snaps-explainer.mp4' | asset_url }}"
-
       $('.product-single__photos').slick({
         arrows: true,
         dots: true,
@@ -3504,9 +3511,6 @@ $(theme.init);
         autoplay: false,
       });
     }else{
-
-      $('.hero video')[0].src = "{{ 'snaps-explainer-mobile.mp4' | asset_url }}"
-
       $('.product-single__photos').slick({
         arrows: false, 
         dots: true,
