@@ -110,7 +110,7 @@
           "1544005077965"
         ],
         "settings": {
-          "show_payment_icons": true,
+          "show_payment_icons": false,
           "logo": "shopify:\/\/shop_images\/180110_SNAPS_logo-WHITE-01-125px_cd032ab0-1fcb-4a0d-ad35-aa4bd6f6f02c.png",
           "logo_max_width": 155,
           "show_social_links": true
@@ -157,6 +157,14 @@
       "1574862330024": {
         "type": "quotes",
         "blocks": {
+          "1594664283550": {
+            "type": "quote",
+            "settings": {
+              "quote_image": "shopify:\/\/shop_images\/Fuck_Racism_front-Ecom-001.jpg",
+              "quote": "<p>\"I just pre ordered the Fuck Racism Snap, super hyped for it.\"<\/p>",
+              "author": "Adam T, Virginia"
+            }
+          },
           "1574862330024-0": {
             "type": "quote",
             "settings": {
@@ -183,6 +191,7 @@
           }
         },
         "block_order": [
+          "1594664283550",
           "1574862330024-0",
           "1574862330024-1",
           "1574862330024-2"
@@ -222,8 +231,8 @@
       "1586311862596": {
         "type": "rich-text",
         "settings": {
-          "title": "Snapback Accessories With Style",
-          "text": "<p>Snaps are for those of us who want to get a bit extra sometimes. They slide over the strap on your snapback hat and add extra flavor to your look. Be on point from 360 degrees whether repping your NBA favorites or amping your personal style. If you don&rsquo;t love your new Snap, we&rsquo;ll send your money back.<\/p>"
+          "title": "ELEVATE YOUR HAT GAME",
+          "text": "<p>Snaps are for those of us who want to get a bit extra sometimes. They slide over the strap on your snapback hat and take your look to the next level. Be on point from 360 degrees whether repping your NBA favorites or amping your personal style. And, if you don&rsquo;t love your new Snap, we&rsquo;ll send your money back.<\/p>"
         }
       },
       "list-collections-template": {
@@ -273,23 +282,23 @@
           "1586537134300": {
             "type": "collection",
             "settings": {
-              "collection_image": "shopify:\/\/shop_images\/Site_Square-30OG.jpg",
-              "collection": "",
-              "text": "SHOP NBA OG 30"
+              "collection_image": "shopify:\/\/shop_images\/Raptor_Site.jpg",
+              "collection": "nba-official",
+              "text": "SHOP NBA OFFICIAL"
             }
           },
           "1586537132497": {
             "type": "collection",
             "settings": {
-              "collection_image": "shopify:\/\/shop_images\/Site_Square-Stars2.jpg",
-              "collection": "stars",
-              "text": "SHOP NBA STARS"
+              "collection_image": "shopify:\/\/shop_images\/Fuck_Racism_Site.jpg",
+              "collection": "initiative",
+              "text": "> INITIATIVE"
             }
           },
           "1586537135234": {
             "type": "collection",
             "settings": {
-              "collection_image": "shopify:\/\/shop_images\/Site_Square-Elements_9a96cfb9-52d8-44b0-92a0-26c1df403609.jpg",
+              "collection_image": "shopify:\/\/shop_images\/LNK_Site.jpg",
               "collection": "elements",
               "text": "SHOP ELEMENTS"
             }
@@ -454,64 +463,6 @@
         ],
         "settings": {}
       },
-      "1592334329306": {
-        "type": "featured-product",
-        "settings": {
-          "featured_product": "crisp-bulls",
-          "show_quantity_selector": true,
-          "show_variant_labels": true,
-          "show_vendor": true,
-          "enable_zoom": true,
-          "enable_payment_button": false,
-          "show_share_buttons": true
-        }
-      },
-      "1592401106115": {
-        "type": "slideshow",
-        "blocks": {
-          "1592401106115-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Court-2.jpg",
-              "alignment": "center",
-              "title": "Purpose",
-              "subheading": "The purpose of > The Greater Than Initiative> is to raise awareness of critical mental and emotional health issues affecting our society.  The purpose is to raise awareness of grassroots and established organizations doing good work without a lot of resources. The purpose is to raise money for these organizations. The purpose is to raise us all up.   We will need to stand up for one another, and we will need to do this together. Because together we are greater than we can ever be on our own.  Together we are >",
-              "link": ""
-            }
-          },
-          "1592401106115-1": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "alignment": "top",
-              "title": "Image slide",
-              "subheading": "Tell your brand's story through video and images",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "1592401106115-0",
-          "1592401106115-1"
-        ],
-        "settings": {
-          "autoplay": true,
-          "autoplay_speed": 5,
-          "slideshow_height": "small",
-          "text_size": "medium"
-        }
-      },
-      "1592401744451": {
-        "type": "feature-row",
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Court-2.jpg",
-          "layout": "left",
-          "title": "PURPOSE",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-          "button_label": "dsds",
-          "button_link": "shopify:\/\/pages\/contact"
-        }
-      },
       "greaterthan-hero": {
         "type": "greaterthan-hero",
         "settings": {
@@ -533,7 +484,7 @@
         }
       },
       "image-bar": {
-        "type": "image-bar",  
+        "type": "image-bar",
         "blocks": {
           "1592488067043": {
             "type": "image",
@@ -557,7 +508,7 @@
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/SNAPS-Fuck_Racism-00_4af64d0c-60e0-4a27-8c87-7c6a8ddaf04f.jpg",
-              "alignment": "top",
+              "alignment": "center",
               "link": "",
               "cta_label": ""
             }
@@ -591,10 +542,7 @@
       "1586537126557",
       "1581958059741",
       "1574862330024",
-      "1574862660510",
-      "1592401106115",
-      "1592334329306",
-      "1592401744451"
+      "1574862660510"
     ]
   },
   "presets": {
