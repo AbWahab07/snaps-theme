@@ -1,0 +1,72 @@
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--one-half">
+      <div class="grid">
+      {%- for block in section.blocks -%}
+      {%- assign max_height = 400 -%}
+      {%- capture img_id -%}CustomImage--{{ forloop.index }}-{{ block.settings.image.id }}{%- endcapture -%}
+      {%- capture img_wrapper_id -%}CustomImageWrapper--{{ forloop.index }}-{{ block.settings.image.id }}{%- endcapture -%}
+      {%- unless block.settings.image == blank -%}
+        {% include 'image-style' with image: block.settings.image, small_style: false, width: max_height, height: max_height, wrapper_id: img_wrapper_id, img_id: img_id %}
+      {%- endunless -%}
+        <div class="grid__item medium-up--one-half" {{ block.shopify_attributes }}>
+          {%- assign product = all_products[block.settings.product] -%}
+          {% include 'product-card-grid', max_height: max_height %}
+        </div>
+      {%- endfor -%}
+      </div>
+    </div>
+    <div class="grid__item medium-up--one-half">
+    {%- if section.settings.image != blank -%}
+      {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+      <div class="image">
+        <div class="hero hero--{{ section.settings.hero_size }}{% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %} hero__overlay{% endif %} box ratio-container lazyload js"
+        {%- if section.settings.image -%}
+           data-bgset="{% include 'bgset', image: section.settings.image %}"
+           data-sizes="auto"
+           data-parent-fit="cover"
+           style="background-position: center center; background-image: url('{{ section.settings.image | img_url: '300x300' }});"
+        {%- endif -%}>
+      {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Products with Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product with Image",
+      "category": "Product",
+      "blocks": [
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
