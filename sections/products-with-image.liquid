@@ -9,7 +9,7 @@
       {%- unless block.settings.image == blank -%}
         {% include 'image-style' with image: block.settings.image, small_style: false, width: max_height, height: max_height, wrapper_id: img_wrapper_id, img_id: img_id %}
       {%- endunless -%}
-        <div class="grid__item medium-up--one-half" {{ block.shopify_attributes }}>
+        <div class="grid__item small--one-half medium-up--one-half" {{ block.shopify_attributes }}>
           {%- assign product = all_products[block.settings.product] -%}
           {% include 'product-card-grid', max_height: max_height %}
         </div>
