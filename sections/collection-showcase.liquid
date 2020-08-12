@@ -11,22 +11,30 @@
 
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="collection-showcase">
   <ul class="grid grid--uniform grid--view-items">
-    {% for block in section.blocks %}
+    {%- for block in section.blocks %}
+    {%- case block.type -%}
+      {%- when 'collection' -%}
+        {%- capture link_url -%}{{collections[block.settings.collection].url}}{%- endcapture -%}
+      {%- when 'product' -%}
+        {%- capture link_url -%}{{products[block.settings.product].url}}{%- endcapture -%}
+      {%- when 'page' -%}
+        {%- capture link_url -%}{{pages[block.settings.page].url}}{%- endcapture -%}
+    {%- endcase -%}
       <li class="grid__item grid__item--{{section.id}} {{grid_item_width}} collection-showcase__griditem">
-        <a href="{{collections[block.settings.collection].url}}">
-          <div class="collection-showcase__content-image" style="background-image: url('{{ block.settings.collection_image | img_url: 'x300' }});"></div>
+        <a href="{{link_url}}">
+          <div class="collection-showcase__content-image" style="background-image: url('{{ block.settings.image | img_url: 'x300' }});"></div>
           <div class="collection-showcase__content">
             {{block.settings.text}}
           </div>
         </a>
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </div>
 
 {% schema %}
 {
-  "name": "Collection Showcase",
+  "name": "Showcase",
   "class": "index-section",
   "max_blocks": 4,
   "blocks": [
@@ -35,7 +43,7 @@
       "name": "Collection",
       "settings": [
         {
-          "id": "collection_image",
+          "id": "image",
           "type": "image_picker",
           "label": "Image"
         },
@@ -43,6 +51,48 @@
           "id": "collection",
           "type": "collection",
           "label": "Collection"
+        },
+        {
+          "id": "text",
+          "type": "text",
+          "label": "Link Text"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "product",
+          "type": "product",
+          "label": "Product"
+        },
+        {
+          "id": "text",
+          "type": "text",
+          "label": "Link Text"
+        }
+      ]
+    },
+    {
+      "type": "page",
+      "name": "Page",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "page",
+          "type": "page",
+          "label": "Page"
         },
         {
           "id": "text",
