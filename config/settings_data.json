@@ -157,12 +157,12 @@
       "1574862330024": {
         "type": "quotes",
         "blocks": {
-          "1594664283550": {
+          "1596746817388": {
             "type": "quote",
             "settings": {
-              "quote_image": "shopify:\/\/shop_images\/Fuck_Racism_front-Ecom-001.jpg",
-              "quote": "<p>\"I just pre ordered the Fuck Racism Snap, super hyped for it.\"<\/p>",
-              "author": "Adam T, Virginia"
+              "quote_image": "shopify:\/\/shop_images\/DSC00007-4.jpg",
+              "quote": "<p>The marker pops off easily and back on securely. Good quality.<\/p>",
+              "author": "Eric F, Massachusetts"
             }
           },
           "1574862330024-0": {
@@ -171,6 +171,14 @@
               "quote_image": "shopify:\/\/shop_images\/SNAPS-Matt_in_seattle-001.jpg",
               "quote": "<p>Just ordered that @giannis_an34 one!!!! You already know!! 🤘🏼🔥🦌<\/p>",
               "author": "Keith B, Florida"
+            }
+          },
+          "1594664283550": {
+            "type": "quote",
+            "settings": {
+              "quote_image": "shopify:\/\/shop_images\/Fuck_Racism_front-Ecom-001.jpg",
+              "quote": "<p>\"I just pre ordered the Fuck Racism Snap, super hyped for it.\"<\/p>",
+              "author": "Adam T, Virginia"
             }
           },
           "1574862330024-1": {
@@ -191,8 +199,9 @@
           }
         },
         "block_order": [
-          "1594664283550",
+          "1596746817388",
           "1574862330024-0",
+          "1594664283550",
           "1574862330024-1",
           "1574862330024-2"
         ],
@@ -533,6 +542,61 @@
           "enable_zoom": true,
           "enable_payment_button": false,
           "show_share_buttons": true
+        }
+      },
+      "proseries-hero": {
+        "type": "proseries-hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/ProSeriesHand3_1.jpg",
+          "alignment": "center",
+          "hero_size": "medium",
+          "content_horizontal_position": "center",
+          "content_vertical_position": "middle",
+          "content_alignment": "center",
+          "image_content": "",
+          "image_width": "",
+          "title": "",
+          "text": "",
+          "color_hero_text": "",
+          "button_label": "",
+          "button_link": "",
+          "color_hero_button": "",
+          "color_hero_button_text": ""
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/DSC09998_315f5704-8e3a-4e12-b286-15f0728350bf.jpg",
+          "layout": "left",
+          "title": "PRO-SERIES",
+          "text": "<p>Golf isn&rsquo;t what it used to be. We mean that in the best way possible. More people are playing the game and changing the perception of what comes to mind when you think &lsquo;golfer.&rsquo; It&rsquo;s more diverse, more fun and a lot more stylish. New and veteran fans are tuning in to see what this new society of golf is wearing.<br><br>Our Golf Ball Marker Snap is a style standout and an easy way to mark your ball. Slip the Snap over the strap of your hat or visor and the magnetized marker comes off and goes back on easily and securely. Function, meet fashion.<br><br><\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "products-with-image": {
+        "type": "products-with-image",
+        "blocks": {
+          "1596729674586": {
+            "type": "product",
+            "settings": {
+              "product": "golf-ball-marker-black"
+            }
+          },
+          "1596729688867": {
+            "type": "product",
+            "settings": {
+              "product": "golf-ball-marker-white"
+            }
+          }
+        },
+        "block_order": [
+          "1596729674586",
+          "1596729688867"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/DSC02089.jpg"
         }
       }
     },
