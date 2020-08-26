@@ -156,12 +156,13 @@
       },
       "1574862330024": {
         "type": "quotes",
+        "disabled": true,
         "blocks": {
           "1596746817388": {
             "type": "quote",
             "settings": {
-              "quote_image": "shopify:\/\/shop_images\/DSC00007-4.jpg",
-              "quote": "<p>The marker pops off easily and back on securely. Good quality.<\/p>",
+              "quote_image": "shopify:\/\/shop_images\/PRO-GBM_Gold.jpg",
+              "quote": "<p>The marker pops off easily and back on securely. Good quality.\"<\/p>",
               "author": "Eric F, Massachusetts"
             }
           },
@@ -291,32 +292,41 @@
           "1586537134300": {
             "type": "collection",
             "settings": {
-              "collection_image": "shopify:\/\/shop_images\/Raptor_Site.jpg",
+              "image": "shopify:\/\/shop_images\/Raptor_Site.jpg",
               "collection": "nba-official",
               "text": "SHOP NBA OFFICIAL"
             }
           },
-          "1586537132497": {
-            "type": "collection",
+          "1597196115066": {
+            "type": "page",
             "settings": {
-              "collection_image": "shopify:\/\/shop_images\/Fuck_Racism_Site.jpg",
-              "collection": "initiative",
+              "image": "shopify:\/\/shop_images\/Fuck_Racism_Site.jpg",
+              "page": "greaterthan",
               "text": "> INITIATIVE"
             }
           },
           "1586537135234": {
             "type": "collection",
             "settings": {
-              "collection_image": "shopify:\/\/shop_images\/LNK_Site.jpg",
+              "image": "shopify:\/\/shop_images\/LNK_Site.jpg",
               "collection": "elements",
               "text": "SHOP ELEMENTS"
+            }
+          },
+          "1597196153279": {
+            "type": "page",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/GBM_Landing.jpg",
+              "page": "pro-series",
+              "text": "SHOP GOLF"
             }
           }
         },
         "block_order": [
           "1586537134300",
-          "1586537132497",
-          "1586537135234"
+          "1597196115066",
+          "1586537135234",
+          "1597196153279"
         ],
         "settings": {}
       },
